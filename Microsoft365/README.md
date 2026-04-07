@@ -10,6 +10,15 @@ Exports Microsoft 365 license assignment information for reporting and cost mana
 ### Get-MailboxReport.ps1
 Retrieves and reports mailbox information for Exchange Online administration and auditing.
 
+### Get-SharedMailboxReport.ps1
+Reports on shared mailboxes including size, delegate permissions, and forwarding status.
+
+### Get-M365MFAStatusReport.ps1
+Checks MFA registration status for all users, identifying accounts without MFA for security compliance.
+
+### Export-TeamsReport.ps1
+Retrieves Microsoft Teams information including owners, member counts, and channels for governance reporting.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

@@ -22,6 +22,7 @@ Thank you for your interest in contributing to FrenetikEquation Scripts.
 
 - All scripts must be tested in a non-production environment before submitting.
 - Include example usage in the script header.
+- Contributors acknowledge that all contributed scripts are provided "AS IS" and subject to the legal disclaimer in the repository root [LICENSE](../LICENSE) file.
 
 ## Naming
 

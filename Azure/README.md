@@ -31,6 +31,9 @@ Reports on Azure SQL servers and databases including tier, sizing, and firewall 
 ### Get-AzurePublicIPReport.ps1
 Retrieves Azure public IP addresses across subscriptions including allocation method, address assignment, and associated resources.
 
+### Get-AzureAppServiceReport.ps1
+Reports on Azure App Service applications including state, HTTPS enforcement, managed identity usage, and hosting plan details.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

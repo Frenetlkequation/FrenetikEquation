@@ -17,6 +17,7 @@ Thank you for your interest in contributing to FrenetikEquation Scripts.
 - Use `[CmdletBinding()]` and `param()` blocks.
 - Use `Write-Host` with color for user-facing output.
 - Avoid hardcoded credentials or secrets.
+- Update `repository.md` whenever scripts are added, removed, renamed, or materially changed so the central script catalog remains current.
 
 ## Testing
 

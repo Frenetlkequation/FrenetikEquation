@@ -31,6 +31,9 @@ Reports on Exchange Online mail transport rules for governance and security revi
 ### Get-MailboxForwardingReport.ps1
 Reports on mailbox forwarding configuration in Exchange Online for security review and mail flow auditing.
 
+### Get-MailboxPermissionReport.ps1
+Reports on mailbox delegation settings in Exchange Online including mailbox permissions, Send As, and Send on Behalf access.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

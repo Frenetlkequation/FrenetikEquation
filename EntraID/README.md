@@ -31,6 +31,9 @@ Retrieves service principals with their API permissions and app role assignments
 ### Get-EntraAppOwnersReport.ps1
 Reports on application registrations and their assigned owners to help identify apps without accountable ownership.
 
+### Get-EntraConnectVersionReport.ps1
+Reports on Microsoft Entra Connect installed version and flags servers that are not on the latest published release.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

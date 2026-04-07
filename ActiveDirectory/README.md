@@ -19,6 +19,15 @@ Reports on password status for AD users including expiration dates, accounts wit
 ### Get-ADDisabledAccountsReport.ps1
 Identifies disabled computer and user accounts in Active Directory for cleanup planning and security auditing.
 
+### Get-ADOUStructureReport.ps1
+Reports on Active Directory Organizational Unit structure including user, computer, and group counts per OU.
+
+### Get-ADComputerReport.ps1
+Retrieves computer accounts from Active Directory with OS, last logon, and inactive status for inventory and security auditing.
+
+### Get-ADGPOReport.ps1
+Reports on Group Policy Objects including link status, enforcement, modification dates, and identifies unlinked GPOs.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

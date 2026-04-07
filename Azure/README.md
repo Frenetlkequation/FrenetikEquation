@@ -19,6 +19,15 @@ Reports on Network Security Group rules, highlighting open inbound rules for sec
 ### Get-AzureVMStatusReport.ps1
 Retrieves Azure VM inventory including power state, sizing, and OS information.
 
+### Get-AzureStorageAccountReport.ps1
+Audits Azure storage accounts across subscriptions for configuration, security settings, and public access exposure.
+
+### Get-AzureKeyVaultExpiryReport.ps1
+Checks Azure Key Vault secrets and certificates for expiration to prevent service outages from credential expiry.
+
+### Get-AzureSQLDatabaseReport.ps1
+Reports on Azure SQL servers and databases including tier, sizing, and firewall rule security review.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

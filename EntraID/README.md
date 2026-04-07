@@ -19,6 +19,15 @@ Identifies guest (external) user accounts in Entra ID with sign-in activity and 
 ### Get-EntraAppCredentialReport.ps1
 Reports on application registrations with expiring or expired client secrets and certificates.
 
+### Get-EntraConditionalAccessReport.ps1
+Retrieves Conditional Access policies with state, conditions, and grant controls for security review.
+
+### Get-EntraDirectoryRolesReport.ps1
+Reports on Entra ID directory role assignments and their members for privileged access review.
+
+### Get-EntraServicePrincipalReport.ps1
+Retrieves service principals with their API permissions and app role assignments for security auditing.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

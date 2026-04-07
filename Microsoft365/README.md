@@ -19,6 +19,15 @@ Checks MFA registration status for all users, identifying accounts without MFA f
 ### Export-TeamsReport.ps1
 Retrieves Microsoft Teams information including owners, member counts, and channels for governance reporting.
 
+### Get-DistributionGroupReport.ps1
+Reports on Exchange Online distribution groups including membership, ownership, and empty group identification.
+
+### Get-OneDriveUsageReport.ps1
+Retrieves OneDrive for Business storage usage per user for capacity planning and governance.
+
+### Get-MailFlowRulesReport.ps1
+Reports on Exchange Online mail transport rules for governance and security review.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

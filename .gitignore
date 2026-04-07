@@ -1,0 +1,25 @@
+# PowerShell
+*.ps1xml
+
+# Logs
+*.log
+
+# Output files
+*.csv
+*.xlsx
+*.json
+*.xml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.vscode/
+*.code-workspace
+
+# Temp files
+*.tmp
+*.bak
+~$*

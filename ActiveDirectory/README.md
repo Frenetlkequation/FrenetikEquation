@@ -5,31 +5,103 @@ This folder contains scripts related to Active Directory administration, reporti
 ## Available Scripts
 
 ### Audit-InactiveUsers.ps1
-Identifies inactive user accounts in Active Directory based on last logon date for security auditing and cleanup purposes.
-
-### Export-ADUserReport.ps1
-Exports Active Directory user information for reporting, auditing, and administrative review.
+I.
 
 ### Export-ADGroupMembership.ps1
-Exports group membership information from Active Directory for auditing and documentation.
+E.
 
-### Get-ADPasswordStatusReport.ps1
-Reports on password status for AD users including expiration dates, accounts with passwords set to never expire, and locked-out accounts.
+### Export-ADUserReport.ps1
+E.
 
-### Get-ADDisabledAccountsReport.ps1
-Identifies disabled computer and user accounts in Active Directory for cleanup planning and security auditing.
-
-### Get-ADOUStructureReport.ps1
-Reports on Active Directory Organizational Unit structure including user, computer, and group counts per OU.
+### Get-ADAccountExpirationReport.ps1
+R.
 
 ### Get-ADComputerReport.ps1
-Retrieves computer accounts from Active Directory with OS, last logon, and inactive status for inventory and security auditing.
+R.
+
+### Get-ADDisabledAccountsReport.ps1
+R.
+
+### Get-ADDomainControllerHealthReport.ps1
+R.
+
+### Get-ADDomainTrustReport.ps1
+R.
+
+### Get-ADDuplicateSPNReport.ps1
+R.
+
+### Get-ADFineGrainedPasswordPolicyReport.ps1
+R.
 
 ### Get-ADGPOReport.ps1
-Reports on Group Policy Objects including link status, enforcement, modification dates, and identifies unlinked GPOs.
+R.
+
+### Get-ADGroupScopeReport.ps1
+R.
+
+### Get-ADGroupWithoutMembersReport.ps1
+R.
+
+### Get-ADInactiveComputersByOUReport.ps1
+R.
+
+### Get-ADKerberosDelegationReport.ps1
+R.
+
+### Get-ADNestedGroupMembershipReport.ps1
+R.
+
+### Get-ADOUDelegationReport.ps1
+R.
+
+### Get-ADOUStructureReport.ps1
+R.
+
+### Get-ADPasswordStatusReport.ps1
+R.
+
+### Get-ADPrivilegedGroupChangeAuditReport.ps1
+R.
 
 ### Get-ADPrivilegedGroupMembersReport.ps1
-Reports on privileged Active Directory group memberships to support privileged access reviews and security auditing.
+R.
+
+### Get-ADPrivilegedUsersReport.ps1
+R.
+
+### Get-ADRecentlyCreatedComputersReport.ps1
+R.
+
+### Get-ADRecentlyCreatedUsersReport.ps1
+R.
+
+### Get-ADReplicationPartnerReport.ps1
+R.
+
+### Get-ADServiceAccountReport.ps1
+R.
+
+### Get-ADSIDHistoryReport.ps1
+R.
+
+### Get-ADStaleComputerReport.ps1
+R.
+
+### Get-ADUnconstrainedDelegationReport.ps1
+R.
+
+### Get-ADUserDepartmentMismatchReport.ps1
+R.
+
+### Get-ADUserLastLogonTrendReport.ps1
+R.
+
+### Get-ADUserLockoutReport.ps1
+R.
+
+### Get-ADUserPasswordExpiryForecastReport.ps1
+R.
 
 ## Usage Notes
 

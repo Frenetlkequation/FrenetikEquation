@@ -5,34 +5,106 @@ This folder contains scripts related to Microsoft 365 administration, reporting,
 ## Available Scripts
 
 ### Export-M365Licenses.ps1
-Exports Microsoft 365 license assignment information for reporting and cost management.
-
-### Get-MailboxReport.ps1
-Retrieves and reports mailbox information for Exchange Online administration and auditing.
-
-### Get-SharedMailboxReport.ps1
-Reports on shared mailboxes including size, delegate permissions, and forwarding status.
-
-### Get-M365MFAStatusReport.ps1
-Checks MFA registration status for all users, identifying accounts without MFA for security compliance.
+E.
 
 ### Export-TeamsReport.ps1
-Retrieves Microsoft Teams information including owners, member counts, and channels for governance reporting.
+E.
 
 ### Get-DistributionGroupReport.ps1
-Reports on Exchange Online distribution groups including membership, ownership, and empty group identification.
+R.
 
-### Get-OneDriveUsageReport.ps1
-Retrieves OneDrive for Business storage usage per user for capacity planning and governance.
+### Get-ExchangeAcceptedDomainReport.ps1
+R.
 
-### Get-MailFlowRulesReport.ps1
-Reports on Exchange Online mail transport rules for governance and security review.
+### Get-ExchangeConnectorReport.ps1
+R.
+
+### Get-ExchangeMobileDeviceAccessReport.ps1
+R.
+
+### Get-M365AntiPhishPolicyReport.ps1
+R.
+
+### Get-M365AppUsageReport.ps1
+R.
+
+### Get-M365DLPPolicyReport.ps1
+R.
+
+### Get-M365GuestAccessSettingsReport.ps1
+R.
+
+### Get-M365InactiveMailboxReport.ps1
+R.
+
+### Get-M365LicenseUtilizationSummaryReport.ps1
+R.
+
+### Get-M365MailboxArchiveStatusReport.ps1
+R.
+
+### Get-M365MailboxSizeSummaryReport.ps1
+R.
+
+### Get-M365MFAStatusReport.ps1
+R.
+
+### Get-M365RetentionPolicyReport.ps1
+R.
+
+### Get-M365RoleAssignmentReport.ps1
+R.
+
+### Get-M365ServiceHealthReport.ps1
+R.
+
+### Get-M365UnifiedGroupReport.ps1
+R.
+
+### Get-M365UserSignInSummaryReport.ps1
+R.
+
+### Get-MailboxAuditStatusReport.ps1
+R.
 
 ### Get-MailboxForwardingReport.ps1
-Reports on mailbox forwarding configuration in Exchange Online for security review and mail flow auditing.
+R.
 
 ### Get-MailboxPermissionReport.ps1
-Reports on mailbox delegation settings in Exchange Online including mailbox permissions, Send As, and Send on Behalf access.
+R.
+
+### Get-MailboxReport.ps1
+R.
+
+### Get-MailFlowRulesReport.ps1
+R.
+
+### Get-OneDriveSharingLinksReport.ps1
+R.
+
+### Get-OneDriveUsageReport.ps1
+R.
+
+### Get-SharedMailboxReport.ps1
+R.
+
+### Get-SharePointExternalSharingReport.ps1
+R.
+
+### Get-SharePointSiteCollectionAdminReport.ps1
+R.
+
+### Get-SharePointSiteUsageReport.ps1
+R.
+
+### Get-TeamsChannelInventoryReport.ps1
+R.
+
+### Get-TeamsPolicyAssignmentReport.ps1
+R.
+
+### Get-TeamsUserActivityReport.ps1
+R.
 
 ## Usage Notes
 

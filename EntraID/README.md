@@ -5,34 +5,106 @@ This folder contains scripts related to Entra ID administration, reporting, and 
 ## Available Scripts
 
 ### Export-EntraUsers.ps1
-Exports Entra ID user information for reporting and audit purposes.
+E.
 
-### Get-EntraGroupMembersReport.ps1
-Retrieves and reports group membership information for Entra ID groups.
-
-### Get-EntraSignInReport.ps1
-Exports Entra ID sign-in activity logs for security monitoring and compliance auditing.
-
-### Get-EntraGuestUsersReport.ps1
-Identifies guest (external) user accounts in Entra ID with sign-in activity and acceptance status.
+### Get-EntraAdminConsentAppsReport.ps1
+R.
 
 ### Get-EntraAppCredentialReport.ps1
-Reports on application registrations with expiring or expired client secrets and certificates.
-
-### Get-EntraConditionalAccessReport.ps1
-Retrieves Conditional Access policies with state, conditions, and grant controls for security review.
-
-### Get-EntraDirectoryRolesReport.ps1
-Reports on Entra ID directory role assignments and their members for privileged access review.
-
-### Get-EntraServicePrincipalReport.ps1
-Retrieves service principals with their API permissions and app role assignments for security auditing.
+R.
 
 ### Get-EntraAppOwnersReport.ps1
-Reports on application registrations and their assigned owners to help identify apps without accountable ownership.
+R.
+
+### Get-EntraAuthMethodsPolicyReport.ps1
+R.
+
+### Get-EntraB2BInvitationsReport.ps1
+R.
+
+### Get-EntraConditionalAccessCoverageReport.ps1
+R.
+
+### Get-EntraConditionalAccessReport.ps1
+R.
 
 ### Get-EntraConnectVersionReport.ps1
-Reports on Microsoft Entra Connect installed version and flags servers that are not on the latest published release.
+R.
+
+### Get-EntraDeviceComplianceSummaryReport.ps1
+R.
+
+### Get-EntraDirectoryAuditReport.ps1
+R.
+
+### Get-EntraDirectoryQuotaReport.ps1
+R.
+
+### Get-EntraDirectoryRolesReport.ps1
+R.
+
+### Get-EntraDynamicGroupRulesReport.ps1
+R.
+
+### Get-EntraEnterpriseAppAssignmentsReport.ps1
+R.
+
+### Get-EntraExternalIdentitiesPolicyReport.ps1
+R.
+
+### Get-EntraGroupLifecycleReport.ps1
+R.
+
+### Get-EntraGroupMembersReport.ps1
+R.
+
+### Get-EntraGuestUsersReport.ps1
+R.
+
+### Get-EntraIdentityProtectionPolicyReport.ps1
+R.
+
+### Get-EntraInactiveUsersReport.ps1
+R.
+
+### Get-EntraMFARegistrationReport.ps1
+R.
+
+### Get-EntraNamedLocationsReport.ps1
+R.
+
+### Get-EntraOauthPermissionGrantsReport.ps1
+R.
+
+### Get-EntraPIMRoleEligibilityReport.ps1
+R.
+
+### Get-EntraPrivilegedRoleAssignmentsReport.ps1
+R.
+
+### Get-EntraRiskDetectionsReport.ps1
+R.
+
+### Get-EntraRiskyUsersReport.ps1
+R.
+
+### Get-EntraSecurityDefaultsReport.ps1
+R.
+
+### Get-EntraServicePrincipalReport.ps1
+R.
+
+### Get-EntraSignInReport.ps1
+E.
+
+### Get-EntraStaleAppCredentialsReport.ps1
+R.
+
+### Get-EntraTenantSettingsReport.ps1
+R.
+
+### Get-EntraUserLicenseReport.ps1
+R.
 
 ## Usage Notes
 

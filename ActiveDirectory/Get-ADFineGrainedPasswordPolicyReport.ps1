@@ -1,0 +1,70 @@
+<#
+.SYNOPSIS
+Reports on Active Directory fine-grained password policies.
+
+.DESCRIPTION
+This script inventories fine-grained password policies and their assigned
+subjects for password governance and security review.
+
+.EXAMPLE
+.\Get-ADFineGrainedPasswordPolicyReport.ps1
+
+.NOTES
+Author: FrenetikEquation
+Website: www.frenetikequation.com
+
+LEGAL DISCLAIMER:
+    This script is provided "AS IS" without warranty of any kind, express or implied,
+    including but not limited to the warranties of merchantability, fitness for a
+    particular purpose, and noninfringement.
+
+    In no event shall the authors, contributors, or copyright holders (FrenetikEquation)
+    be liable for any claim, damages, or other liability, whether in an action of
+    contract, tort, or otherwise, arising from, out of, or in connection with this
+    script or the use or other dealings in this script. This includes, without
+    limitation, any direct, indirect, incidental, special, exemplary, or consequential
+    damages, including but not limited to loss of data, loss of revenue, business
+    interruption, or damage to systems.
+
+    USE AT YOUR OWN RISK. You are solely responsible for testing this script in a
+    non-production environment before deploying to any production system. The user
+    assumes all responsibility and risk for the use of this script. It is strongly
+    recommended that you review, understand, and validate the script logic before
+    execution.
+
+    By using this script, you acknowledge and agree to these terms. If you do not
+    agree, do not use this script. Refer to the LICENSE file in the root of this
+    repository for the full license terms.
+#>
+
+[CmdletBinding()]
+param ()
+
+#Requires -Module ActiveDirectory
+
+Write-Host "Retrieving fine-grained password policies..." -ForegroundColor Cyan
+
+$policies = Get-ADFineGrainedPasswordPolicy -Filter * | Sort-Object Name
+
+$report = foreach ($policy in $policies) {
+    $subjects = Get-ADFineGrainedPasswordPolicySubject -Identity $policy.DistinguishedName -ErrorAction SilentlyContinue
+    [PSCustomObject]@{
+        Name                 = $policy.Name
+        Precedence           = $policy.Precedence
+        MinPasswordLength    = $policy.MinPasswordLength
+        PasswordHistoryCount = $policy.PasswordHistoryCount
+        MaxPasswordAge       = $policy.MaxPasswordAge
+        MinPasswordAge       = $policy.MinPasswordAge
+        ComplexityEnabled    = $policy.ComplexityEnabled
+        LockoutThreshold     = $policy.LockoutThreshold
+        Subjects             = if ($subjects) { ($subjects | ForEach-Object { $_.Name }) -join "; " } else { "None" }
+    }
+}
+
+if ($report.Count -eq 0) {
+    Write-Host "No fine-grained password policies found." -ForegroundColor Yellow
+}
+else {
+    Write-Host "Retrieved $($report.Count) fine-grained password policy record(s)." -ForegroundColor Green
+    $report | Format-Table -AutoSize
+}

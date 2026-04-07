@@ -4,35 +4,107 @@ This folder contains scripts related to Azure administration, reporting, and ope
 
 ## Available Scripts
 
-### Get-AzureResourcesReport.ps1
-Retrieves and reports on Azure resources across subscriptions for inventory and auditing purposes.
-
 ### Export-AzureRoleAssignments.ps1
-Exports Azure role assignment information for RBAC review and security auditing.
+E.
 
-### Get-AzureTagComplianceReport.ps1
-Audits resource groups for required tags to support governance and cost management compliance.
+### Get-AzureAdvisorRecommendationsReport.ps1
+R.
 
-### Get-AzureNSGRulesReport.ps1
-Reports on Network Security Group rules, highlighting open inbound rules for security review.
+### Get-AzureAKSClusterReport.ps1
+R.
 
-### Get-AzureVMStatusReport.ps1
-Retrieves Azure VM inventory including power state, sizing, and OS information.
+### Get-AzureApplicationGatewayReport.ps1
+R.
 
-### Get-AzureStorageAccountReport.ps1
-Audits Azure storage accounts across subscriptions for configuration, security settings, and public access exposure.
-
-### Get-AzureKeyVaultExpiryReport.ps1
-Checks Azure Key Vault secrets and certificates for expiration to prevent service outages from credential expiry.
-
-### Get-AzureSQLDatabaseReport.ps1
-Reports on Azure SQL servers and databases including tier, sizing, and firewall rule security review.
-
-### Get-AzurePublicIPReport.ps1
-Retrieves Azure public IP addresses across subscriptions including allocation method, address assignment, and associated resources.
+### Get-AzureAppServicePlanReport.ps1
+R.
 
 ### Get-AzureAppServiceReport.ps1
-Reports on Azure App Service applications including state, HTTPS enforcement, managed identity usage, and hosting plan details.
+R.
+
+### Get-AzureAutomationAccountReport.ps1
+R.
+
+### Get-AzureBackupVaultReport.ps1
+R.
+
+### Get-AzureBastionHostReport.ps1
+R.
+
+### Get-AzureContainerRegistryReport.ps1
+R.
+
+### Get-AzureCosmosDBReport.ps1
+R.
+
+### Get-AzureCostByResourceGroupReport.ps1
+R.
+
+### Get-AzureDDoSPlanReport.ps1
+R.
+
+### Get-AzureFirewallReport.ps1
+R.
+
+### Get-AzureFunctionAppReport.ps1
+R.
+
+### Get-AzureKeyVaultExpiryReport.ps1
+R.
+
+### Get-AzureLoadBalancerReport.ps1
+R.
+
+### Get-AzureLogicAppReport.ps1
+R.
+
+### Get-AzureManagedDiskReport.ps1
+R.
+
+### Get-AzureMonitorAlertRuleReport.ps1
+R.
+
+### Get-AzureNSGRulesReport.ps1
+R.
+
+### Get-AzurePolicyComplianceReport.ps1
+R.
+
+### Get-AzurePrivateEndpointReport.ps1
+R.
+
+### Get-AzurePublicIPReport.ps1
+R.
+
+### Get-AzureRecoveryServicesReport.ps1
+R.
+
+### Get-AzureRedisCacheReport.ps1
+R.
+
+### Get-AzureResourcesReport.ps1
+R.
+
+### Get-AzureRouteTableReport.ps1
+R.
+
+### Get-AzureSQLDatabaseReport.ps1
+R.
+
+### Get-AzureStorageAccountReport.ps1
+R.
+
+### Get-AzureSubnetDelegationReport.ps1
+R.
+
+### Get-AzureTagComplianceReport.ps1
+R.
+
+### Get-AzureVirtualNetworkReport.ps1
+R.
+
+### Get-AzureVMStatusReport.ps1
+R.
 
 ## Usage Notes
 

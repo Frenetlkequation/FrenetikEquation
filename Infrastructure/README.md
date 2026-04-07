@@ -4,32 +4,104 @@ This folder contains scripts related to infrastructure operations, inventory, an
 
 ## Available Scripts
 
-### Get-ServerInventory.ps1
-Collects server inventory information including OS, hardware, and network details for documentation and auditing.
-
-### Test-NetworkConnectivityReport.ps1
-Tests network connectivity to specified endpoints and produces a connectivity status report.
-
-### Get-DiskSpaceReport.ps1
-Monitors disk space usage and flags volumes below a free space threshold for capacity management.
-
-### Get-WindowsServicesReport.ps1
-Reports on Windows services status, identifying stopped automatic services that may need attention.
-
-### Get-PendingUpdatesReport.ps1
-Queries pending Windows updates for patch management and compliance auditing.
+### Get-BitLockerStatusReport.ps1
+R.
 
 ### Get-CertificateExpiryReport.ps1
-Checks SSL/TLS certificates on remote endpoints for validity and expiration to support proactive certificate management.
+R.
 
-### Get-EventLogReport.ps1
-Queries System and Application event logs for errors and warnings on local or remote servers.
+### Get-CPUUtilizationReport.ps1
+R.
+
+### Get-DiskSpaceReport.ps1
+C.
 
 ### Get-DNSConfigurationReport.ps1
-Retrieves DNS client configuration and tests DNS resolution for network troubleshooting and documentation.
+R.
+
+### Get-EventLogReport.ps1
+R.
+
+### Get-FirewallProfileReport.ps1
+R.
+
+### Get-InstalledHotfixReport.ps1
+R.
+
+### Get-InstalledSoftwareReport.ps1
+R.
+
+### Get-LocalAdministratorsReport.ps1
+R.
+
+### Get-LocalGroupMembershipReport.ps1
+R.
+
+### Get-LocalUserAccountReport.ps1
+R.
+
+### Get-MemoryUsageReport.ps1
+R.
+
+### Get-NetworkAdapterReport.ps1
+R.
+
+### Get-NTPConfigurationReport.ps1
+R.
+
+### Get-OSVersionReport.ps1
+R.
+
+### Get-PageFileConfigurationReport.ps1
+R.
+
+### Get-PendingUpdatesReport.ps1
+R.
+
+### Get-PerformanceCounterSnapshotReport.ps1
+R.
+
+### Get-PrinterInventoryReport.ps1
+R.
+
+### Get-RDPSessionReport.ps1
+R.
+
+### Get-RebootPendingStatusReport.ps1
+R.
+
+### Get-ScheduledTaskStatusReport.ps1
+R.
+
+### Get-ServerInventory.ps1
+C.
+
+### Get-SMBSharesReport.ps1
+R.
+
+### Get-StartupProgramReport.ps1
+R.
+
+### Get-SystemUptimeAndRebootReport.ps1
+R.
+
+### Get-TimeSyncStatusReport.ps1
+R.
+
+### Get-TopProcessReport.ps1
+R.
 
 ### Get-UptimeReport.ps1
-Reports on server last boot time and uptime duration to support reboot planning and operational health checks.
+R.
+
+### Get-WindowsServicesReport.ps1
+R.
+
+### Get-WinRMConfigurationReport.ps1
+R.
+
+### Test-NetworkConnectivityReport.ps1
+T.
 
 ## Usage Notes
 

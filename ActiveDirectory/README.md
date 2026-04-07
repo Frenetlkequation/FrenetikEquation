@@ -28,6 +28,9 @@ Retrieves computer accounts from Active Directory with OS, last logon, and inact
 ### Get-ADGPOReport.ps1
 Reports on Group Policy Objects including link status, enforcement, modification dates, and identifies unlinked GPOs.
 
+### Get-ADPrivilegedGroupMembersReport.ps1
+Reports on privileged Active Directory group memberships to support privileged access reviews and security auditing.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

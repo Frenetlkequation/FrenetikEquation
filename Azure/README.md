@@ -28,6 +28,9 @@ Checks Azure Key Vault secrets and certificates for expiration to prevent servic
 ### Get-AzureSQLDatabaseReport.ps1
 Reports on Azure SQL servers and databases including tier, sizing, and firewall rule security review.
 
+### Get-AzurePublicIPReport.ps1
+Retrieves Azure public IP addresses across subscriptions including allocation method, address assignment, and associated resources.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

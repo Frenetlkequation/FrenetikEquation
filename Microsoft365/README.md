@@ -28,6 +28,9 @@ Retrieves OneDrive for Business storage usage per user for capacity planning and
 ### Get-MailFlowRulesReport.ps1
 Reports on Exchange Online mail transport rules for governance and security review.
 
+### Get-MailboxForwardingReport.ps1
+Reports on mailbox forwarding configuration in Exchange Online for security review and mail flow auditing.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

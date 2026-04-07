@@ -28,6 +28,9 @@ Queries System and Application event logs for errors and warnings on local or re
 ### Get-DNSConfigurationReport.ps1
 Retrieves DNS client configuration and tests DNS resolution for network troubleshooting and documentation.
 
+### Get-UptimeReport.ps1
+Reports on server last boot time and uptime duration to support reboot planning and operational health checks.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

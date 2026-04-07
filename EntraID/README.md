@@ -28,6 +28,9 @@ Reports on Entra ID directory role assignments and their members for privileged 
 ### Get-EntraServicePrincipalReport.ps1
 Retrieves service principals with their API permissions and app role assignments for security auditing.
 
+### Get-EntraAppOwnersReport.ps1
+Reports on application registrations and their assigned owners to help identify apps without accountable ownership.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

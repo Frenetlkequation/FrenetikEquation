@@ -2,7 +2,7 @@
 
 FrenetikEquation PowerShell Script Repository is a practical collection of PowerShell scripts for Active Directory, Entra ID, Azure, Microsoft 365, and Windows infrastructure administration. The repository is built for reporting, auditing, operational support, governance reviews, tenant visibility, server health checks, and day-to-day IT administration.
 
-This repository currently includes 168 PowerShell scripts covering:
+This repository currently includes 668 PowerShell scripts covering:
 
 - Active Directory audit scripts
 - Entra ID reporting and security review scripts
@@ -10,202 +10,709 @@ This repository currently includes 168 PowerShell scripts covering:
 - Microsoft 365 administration and reporting scripts
 - Windows infrastructure and server operations scripts
 
+All script files currently tracked in this repository are PowerShell `.ps1` scripts.
+
 ## Active Directory Scripts
 
 These Active Directory PowerShell scripts focus on user auditing, group membership reporting, computer inventory, password health, GPO reporting, OU structure analysis, domain controller health checks, lockout monitoring, and privileged access review.
 
-- `ActiveDirectory/Audit-InactiveUsers.ps1`: I.
-- `ActiveDirectory/Export-ADGroupMembership.ps1`: E.
-- `ActiveDirectory/Export-ADUserReport.ps1`: E.
-- `ActiveDirectory/Get-ADAccountExpirationReport.ps1`: R.
-- `ActiveDirectory/Get-ADComputerReport.ps1`: R.
-- `ActiveDirectory/Get-ADDisabledAccountsReport.ps1`: R.
-- `ActiveDirectory/Get-ADDomainControllerHealthReport.ps1`: R.
-- `ActiveDirectory/Get-ADDomainTrustReport.ps1`: R.
-- `ActiveDirectory/Get-ADDuplicateSPNReport.ps1`: R.
-- `ActiveDirectory/Get-ADFineGrainedPasswordPolicyReport.ps1`: R.
-- `ActiveDirectory/Get-ADGPOReport.ps1`: R.
-- `ActiveDirectory/Get-ADGroupScopeReport.ps1`: R.
-- `ActiveDirectory/Get-ADGroupWithoutMembersReport.ps1`: R.
-- `ActiveDirectory/Get-ADInactiveComputersByOUReport.ps1`: R.
-- `ActiveDirectory/Get-ADKerberosDelegationReport.ps1`: R.
-- `ActiveDirectory/Get-ADNestedGroupMembershipReport.ps1`: R.
-- `ActiveDirectory/Get-ADOUDelegationReport.ps1`: R.
-- `ActiveDirectory/Get-ADOUStructureReport.ps1`: R.
-- `ActiveDirectory/Get-ADPasswordStatusReport.ps1`: R.
-- `ActiveDirectory/Get-ADPrivilegedGroupChangeAuditReport.ps1`: R.
-- `ActiveDirectory/Get-ADPrivilegedGroupMembersReport.ps1`: R.
-- `ActiveDirectory/Get-ADPrivilegedUsersReport.ps1`: R.
-- `ActiveDirectory/Get-ADRecentlyCreatedComputersReport.ps1`: R.
-- `ActiveDirectory/Get-ADRecentlyCreatedUsersReport.ps1`: R.
-- `ActiveDirectory/Get-ADReplicationPartnerReport.ps1`: R.
-- `ActiveDirectory/Get-ADServiceAccountReport.ps1`: R.
-- `ActiveDirectory/Get-ADSIDHistoryReport.ps1`: R.
-- `ActiveDirectory/Get-ADStaleComputerReport.ps1`: R.
-- `ActiveDirectory/Get-ADUnconstrainedDelegationReport.ps1`: R.
-- `ActiveDirectory/Get-ADUserDepartmentMismatchReport.ps1`: R.
-- `ActiveDirectory/Get-ADUserLastLogonTrendReport.ps1`: R.
-- `ActiveDirectory/Get-ADUserLockoutReport.ps1`: R.
-- `ActiveDirectory/Get-ADUserPasswordExpiryForecastReport.ps1`: R.
+- `ActiveDirectory/Audit-InactiveUsers.ps1`: Identifies inactive user accounts in Active Directory.
+- `ActiveDirectory/Export-ADGroupMembership.ps1`: Exports group membership information from Active Directory.
+- `ActiveDirectory/Export-ADUserReport.ps1`: Exports Active Directory user information for reporting purposes.
+- `ActiveDirectory/Get-ADAccountExpirationReport.ps1`: Reports on Active Directory account expiration dates.
+- `ActiveDirectory/Get-ADAuthenticationPolicyReport.ps1`: Reports on Active Directory authentication policies.
+- `ActiveDirectory/Get-ADAuthenticationPolicySiloReport.ps1`: Reports on Active Directory authentication policy silos.
+- `ActiveDirectory/Get-ADCentralAccessPolicyReport.ps1`: Reports on Active Directory central access policies.
+- `ActiveDirectory/Get-ADCentralAccessRuleReport.ps1`: Reports on Active Directory central access rules.
+- `ActiveDirectory/Get-ADClaimTransformPolicyReport.ps1`: Reports on Active Directory claim transform policies.
+- `ActiveDirectory/Get-ADClaimTypeReport.ps1`: Reports on Active Directory claim types.
+- `ActiveDirectory/Get-ADComputerBitLockerRecoveryReport.ps1`: Reports on Active Directory computer BitLocker recovery information.
+- `ActiveDirectory/Get-ADComputerDescriptionCompletenessReport.ps1`: Reports on Active Directory computer description completeness.
+- `ActiveDirectory/Get-ADComputerDnsHostNameMismatchReport.ps1`: Reports on Active Directory computer DNS host name mismatches.
+- `ActiveDirectory/Get-ADComputerLAPSStatusReport.ps1`: Reports on Active Directory computer LAPS status.
+- `ActiveDirectory/Get-ADComputerManagedByReport.ps1`: Reports on Active Directory computer managed-by assignments.
+- `ActiveDirectory/Get-ADComputerOperatingSystemLifecycleReport.ps1`: Reports on Active Directory computer operating system lifecycle.
+- `ActiveDirectory/Get-ADComputerPasswordAgeReport.ps1`: Reports on Active Directory computer password age.
+- `ActiveDirectory/Get-ADComputerReport.ps1`: Reports on Active Directory computer accounts.
+- `ActiveDirectory/Get-ADComputerResourceBasedDelegationReport.ps1`: Reports on Active Directory computer resource-based delegation settings.
+- `ActiveDirectory/Get-ADComputerServicePrincipalReport.ps1`: Reports on Active Directory computer service principal names.
+- `ActiveDirectory/Get-ADComputerTrustedForDelegationReport.ps1`: Reports on Active Directory computers trusted for delegation.
+- `ActiveDirectory/Get-ADDCDfsrRecoveryReport.ps1`: Reports on AD DFSR recovery.
+- `ActiveDirectory/Get-ADDCDiskCapacityReport.ps1`: Reports on AD Disk capacity.
+- `ActiveDirectory/Get-ADDCDnsResolutionReport.ps1`: Reports on AD DNS resolution.
+- `ActiveDirectory/Get-ADDCFirewallStateReport.ps1`: Reports on AD Firewall state.
+- `ActiveDirectory/Get-ADDCLdapBindingSecurityReport.ps1`: Reports on AD LDAP binding security.
+- `ActiveDirectory/Get-ADDCLdapChannelBindingReport.ps1`: Reports on AD LDAP channel binding.
+- `ActiveDirectory/Get-ADDCLdapsCertificateReport.ps1`: Reports on AD LDAPS certificate.
+- `ActiveDirectory/Get-ADDCOSVersionComplianceReport.ps1`: Reports on AD OS version compliance.
+- `ActiveDirectory/Get-ADDCPortConnectivityReport.ps1`: Reports on AD Port connectivity.
+- `ActiveDirectory/Get-ADDCRdpSecurityReport.ps1`: Reports on AD RDP security.
+- `ActiveDirectory/Get-ADDCRemoteManagementConfigurationReport.ps1`: Reports on AD Remote management configuration.
+- `ActiveDirectory/Get-ADDCServiceStatusReport.ps1`: Reports on AD Service status.
+- `ActiveDirectory/Get-ADDCSmbProtocolConfigurationReport.ps1`: Reports on AD SMB protocol configuration.
+- `ActiveDirectory/Get-ADDCTimeOffsetReport.ps1`: Reports on AD Time offset.
+- `ActiveDirectory/Get-ADDCTimeSourceReport.ps1`: Reports on AD Time source.
+- `ActiveDirectory/Get-ADDCWindowsUpdateAgeReport.ps1`: Reports on AD Windows Update age.
+- `ActiveDirectory/Get-ADDNSConditionalForwarderReport.ps1`: Reports on AD Conditional forwarders.
+- `ActiveDirectory/Get-ADDNSDuplicateHostRecordReport.ps1`: Reports on AD Duplicate host records.
+- `ActiveDirectory/Get-ADDNSDuplicateIpRecordReport.ps1`: Reports on AD Duplicate IP records.
+- `ActiveDirectory/Get-ADDNSForwarderConsistencyReport.ps1`: Reports on AD Forwarder consistency.
+- `ActiveDirectory/Get-ADDNSNameServerReport.ps1`: Reports on AD Name servers.
+- `ActiveDirectory/Get-ADDNSOrphanedRecordReport.ps1`: Reports on AD Orphaned records.
+- `ActiveDirectory/Get-ADDNSRecordTimestampReport.ps1`: Reports on AD Record timestamps.
+- `ActiveDirectory/Get-ADDNSRootHintReport.ps1`: Reports on AD Root hints.
+- `ActiveDirectory/Get-ADDNSSRVRecordReport.ps1`: Reports on AD SRV records.
+- `ActiveDirectory/Get-ADDNSScavengingConfigurationReport.ps1`: Reports on AD Scavenging configuration.
+- `ActiveDirectory/Get-ADDNSTombstoneRecordReport.ps1`: Reports on AD Tombstone records.
+- `ActiveDirectory/Get-ADDNSZoneAgingReport.ps1`: Reports on AD Zone aging.
+- `ActiveDirectory/Get-ADDNSZoneApplicationPartitionReport.ps1`: Reports on AD Zone application partitions.
+- `ActiveDirectory/Get-ADDNSZoneDelegationReport.ps1`: Reports on AD Zone delegation.
+- `ActiveDirectory/Get-ADDNSZoneTransferSettingReport.ps1`: Reports on AD Zone transfer settings.
+- `ActiveDirectory/Get-ADDelegationRightAssignmentReport.ps1`: Reports on Active Directory delegation right assignments.
+- `ActiveDirectory/Get-ADDeletedObjectContainerReport.ps1`: Reports on Active Directory deleted object containers.
+- `ActiveDirectory/Get-ADDisabledAccountsReport.ps1`: Reports on disabled Active Directory computer and user accounts.
+- `ActiveDirectory/Get-ADDomainControllerHealthReport.ps1`: Reports on Active Directory domain controller health.
+- `ActiveDirectory/Get-ADDomainFunctionalLevelReport.ps1`: Reports on Active Directory domain functional level.
+- `ActiveDirectory/Get-ADDomainGUIDReport.ps1`: Reports on Active Directory domain GUID data.
+- `ActiveDirectory/Get-ADDomainRIDsReport.ps1`: Reports on Active Directory domain RID information.
+- `ActiveDirectory/Get-ADDomainTrustReport.ps1`: Reports on Active Directory domain trusts.
+- `ActiveDirectory/Get-ADDuplicateSPNReport.ps1`: Reports on duplicate Service Principal Names in Active Directory.
+- `ActiveDirectory/Get-ADFineGrainedPasswordPolicyReport.ps1`: Reports on Active Directory fine-grained password policies.
+- `ActiveDirectory/Get-ADForeignSecurityPrincipalContainerReport.ps1`: Reports on Active Directory foreign security principal container.
+- `ActiveDirectory/Get-ADForestDnsApplicationPartitionReport.ps1`: Reports on Active Directory forest DNS application partitions.
+- `ActiveDirectory/Get-ADForestDomainControllerInventoryReport.ps1`: Reports on Active Directory forest domain controllers.
+- `ActiveDirectory/Get-ADForestFSMORoleReport.ps1`: Reports on Active Directory forest FSMO roles.
+- `ActiveDirectory/Get-ADForestFunctionalLevelReport.ps1`: Reports on Active Directory forest functional level.
+- `ActiveDirectory/Get-ADForestGlobalCatalogReport.ps1`: Reports on Active Directory global catalog servers.
+- `ActiveDirectory/Get-ADForestOptionalFeatureReport.ps1`: Reports on Active Directory forest optional features.
+- `ActiveDirectory/Get-ADForestPrivilegedAccessManagementFeatureReport.ps1`: Reports on Active Directory forest privileged access management feature status.
+- `ActiveDirectory/Get-ADForestRecycleBinStatusReport.ps1`: Reports on Active Directory forest Recycle Bin status.
+- `ActiveDirectory/Get-ADForestReplicationSummaryReport.ps1`: Reports on Active Directory forest replication summary.
+- `ActiveDirectory/Get-ADForestRootDSEReport.ps1`: Reports on Active Directory forest RootDSE data.
+- `ActiveDirectory/Get-ADForestSPNSuffixReport.ps1`: Reports on Active Directory forest SPN suffixes.
+- `ActiveDirectory/Get-ADForestSchemaAttributeReport.ps1`: Reports on Active Directory forest schema attributes.
+- `ActiveDirectory/Get-ADForestSchemaClassReport.ps1`: Reports on Active Directory forest schema classes.
+- `ActiveDirectory/Get-ADForestSchemaVersionReport.ps1`: Reports on Active Directory forest schema version.
+- `ActiveDirectory/Get-ADForestSiteLinkReport.ps1`: Reports on Active Directory forest site links.
+- `ActiveDirectory/Get-ADForestSiteReport.ps1`: Reports on Active Directory forest sites.
+- `ActiveDirectory/Get-ADForestSubnetReport.ps1`: Reports on Active Directory forest subnets.
+- `ActiveDirectory/Get-ADForestSummaryReport.ps1`: Reports on Active Directory forest summary.
+- `ActiveDirectory/Get-ADForestTrustTopologyReport.ps1`: Reports on Active Directory forest trust topology.
+- `ActiveDirectory/Get-ADForestUPNSuffixReport.ps1`: Reports on Active Directory forest UPN suffixes.
+- `ActiveDirectory/Get-ADGPOReport.ps1`: Reports on Active Directory GPO links and status.
+- `ActiveDirectory/Get-ADGroupDescriptionCompletenessReport.ps1`: Reports on Active Directory group description completeness.
+- `ActiveDirectory/Get-ADGroupEmailAttributeReport.ps1`: Reports on Active Directory group email attributes.
+- `ActiveDirectory/Get-ADGroupManagedByReport.ps1`: Reports on Active Directory group managed-by assignments.
+- `ActiveDirectory/Get-ADGroupManagerlessReport.ps1`: Reports on Active Directory groups without a manager.
+- `ActiveDirectory/Get-ADGroupMembershipChangeWindowReport.ps1`: Reports on Active Directory group membership change windows.
+- `ActiveDirectory/Get-ADGroupNestingDepthReport.ps1`: Reports on Active Directory group nesting depth.
+- `ActiveDirectory/Get-ADGroupPolicyBlockedInheritanceReport.ps1`: Reports on Active Directory Group Policy blocked inheritance.
+- `ActiveDirectory/Get-ADGroupPolicyEnforcementReport.ps1`: Reports on Active Directory Group Policy enforcement.
+- `ActiveDirectory/Get-ADGroupPolicyInheritanceReport.ps1`: Reports on Active Directory Group Policy inheritance.
+- `ActiveDirectory/Get-ADGroupPolicyLinkSummaryReport.ps1`: Reports on Active Directory Group Policy link summary.
+- `ActiveDirectory/Get-ADGroupPolicyOwnerReport.ps1`: Reports on Active Directory Group Policy owners.
+- `ActiveDirectory/Get-ADGroupPolicyPermissionReport.ps1`: Reports on Active Directory Group Policy permissions.
+- `ActiveDirectory/Get-ADGroupPolicyVersionConsistencyReport.ps1`: Reports on Active Directory Group Policy version consistency.
+- `ActiveDirectory/Get-ADGroupPolicyWmiFilterReport.ps1`: Reports on Active Directory Group Policy WMI filters.
+- `ActiveDirectory/Get-ADGroupScopeReport.ps1`: Reports on Active Directory group scopes and categories.
+- `ActiveDirectory/Get-ADGroupSelfMembershipReport.ps1`: Reports on Active Directory groups with self-membership.
+- `ActiveDirectory/Get-ADGroupSidHistoryReport.ps1`: Reports on Active Directory group SIDHistory usage.
+- `ActiveDirectory/Get-ADGroupWithoutMembersReport.ps1`: Reports on empty Active Directory groups.
+- `ActiveDirectory/Get-ADInactiveComputersByOUReport.ps1`: Reports on inactive Active Directory computers by OU.
+- `ActiveDirectory/Get-ADKerberosDelegationReport.ps1`: Reports on Kerberos delegation configuration in Active Directory.
+- `ActiveDirectory/Get-ADLostAndFoundContainerReport.ps1`: Reports on Active Directory LostAndFound container.
+- `ActiveDirectory/Get-ADNTDSConnectionReport.ps1`: Reports on Active Directory NTDS connections.
+- `ActiveDirectory/Get-ADNTDSSettingsReport.ps1`: Reports on Active Directory NTDS settings.
+- `ActiveDirectory/Get-ADNestedGroupMembershipReport.ps1`: Reports on nested Active Directory group membership.
+- `ActiveDirectory/Get-ADOUComputerCountReport.ps1`: Reports on Active Directory computer counts by organizational unit.
+- `ActiveDirectory/Get-ADOUDelegatedPermissionDetailReport.ps1`: Reports on Active Directory organizational unit delegated permissions.
+- `ActiveDirectory/Get-ADOUDelegationReport.ps1`: Reports on Active Directory OU delegation settings.
+- `ActiveDirectory/Get-ADOUEmptyChildObjectReport.ps1`: Reports on empty child objects under Active Directory organizational units.
+- `ActiveDirectory/Get-ADOUGroupPolicyInheritanceReport.ps1`: Reports on Active Directory OU Group Policy inheritance.
+- `ActiveDirectory/Get-ADOUManagedByReport.ps1`: Reports on Active Directory organizational unit managed-by assignments.
+- `ActiveDirectory/Get-ADOUProtectedFromDeletionReport.ps1`: Reports on Active Directory organizational units protected from deletion.
+- `ActiveDirectory/Get-ADOUStructureReport.ps1`: Reports on Active Directory Organizational Unit structure.
+- `ActiveDirectory/Get-ADOUUserCountReport.ps1`: Reports on Active Directory user counts by organizational unit.
+- `ActiveDirectory/Get-ADPasswordAESKeyMissingSummaryReport.ps1`: Reports on AD AES key missing summary.
+- `ActiveDirectory/Get-ADPasswordDelegatableAdminSummaryReport.ps1`: Reports on AD Delegatable admin summary.
+- `ActiveDirectory/Get-ADPasswordDuplicatePasswordSummaryReport.ps1`: Reports on AD Duplicate password summary.
+- `ActiveDirectory/Get-ADPasswordPasswordNotRequiredDetailReport.ps1`: Reports on AD Password not required detail.
+- `ActiveDirectory/Get-ADPasswordStatusReport.ps1`: Reports on Active Directory user password status.
+- `ActiveDirectory/Get-ADPasswordWeakHashSummaryReport.ps1`: Reports on AD Weak hash summary.
+- `ActiveDirectory/Get-ADPrivilegedAccountLogonWorkstationReport.ps1`: Reports on Active Directory privileged account logon workstations.
+- `ActiveDirectory/Get-ADPrivilegedGroupChangeAuditReport.ps1`: Reports on recent Active Directory privileged group changes.
+- `ActiveDirectory/Get-ADPrivilegedGroupMembersReport.ps1`: Reports on privileged group memberships in Active Directory.
+- `ActiveDirectory/Get-ADPrivilegedGroupScopeReviewReport.ps1`: Reports on Active Directory privileged group scope reviews.
+- `ActiveDirectory/Get-ADPrivilegedUsersReport.ps1`: Reports on privileged Active Directory user memberships.
+- `ActiveDirectory/Get-ADQuotasContainerReport.ps1`: Reports on Active Directory quotas container.
+- `ActiveDirectory/Get-ADRecentlyCreatedComputersReport.ps1`: Reports on recently created Active Directory computer accounts.
+- `ActiveDirectory/Get-ADRecentlyCreatedUsersReport.ps1`: Reports on recently created Active Directory user accounts.
+- `ActiveDirectory/Get-ADReplicationConnectionReport.ps1`: Reports on AD Connection.
+- `ActiveDirectory/Get-ADReplicationFailureReport.ps1`: Reports on AD Failure.
+- `ActiveDirectory/Get-ADReplicationLatencyReport.ps1`: Reports on AD Latency.
+- `ActiveDirectory/Get-ADReplicationMetadataSummaryReport.ps1`: Reports on AD Metadata summary.
+- `ActiveDirectory/Get-ADReplicationPartnerMetadataReport.ps1`: Reports on AD Partner metadata.
+- `ActiveDirectory/Get-ADReplicationPartnerReport.ps1`: Reports on Active Directory replication partners.
+- `ActiveDirectory/Get-ADReplicationQueueReport.ps1`: Reports on AD Queue.
+- `ActiveDirectory/Get-ADReplicationSiteConsistencyReport.ps1`: Reports on AD Site consistency.
+- `ActiveDirectory/Get-ADSIDHistoryReport.ps1`: Reports on Active Directory SIDHistory usage.
+- `ActiveDirectory/Get-ADSYSVOLMigrationStateReport.ps1`: Reports on Active Directory SYSVOL migration state.
+- `ActiveDirectory/Get-ADServiceAccountDelegationReport.ps1`: Reports on Active Directory service account delegation settings.
+- `ActiveDirectory/Get-ADServiceAccountReport.ps1`: Reports on Active Directory managed service accounts.
+- `ActiveDirectory/Get-ADServiceAccountSPNReport.ps1`: Reports on Active Directory service account SPNs.
+- `ActiveDirectory/Get-ADSiteBridgeReport.ps1`: Reports on Active Directory site bridge configuration.
+- `ActiveDirectory/Get-ADSiteDomainControllerPlacementReport.ps1`: Reports on Active Directory site domain controller placement.
+- `ActiveDirectory/Get-ADSiteLinkCostReport.ps1`: Reports on Active Directory site link costs.
+- `ActiveDirectory/Get-ADSiteLinkScheduleReport.ps1`: Reports on Active Directory site link schedules.
+- `ActiveDirectory/Get-ADSiteSubnetCoverageReport.ps1`: Reports on Active Directory site subnet coverage.
+- `ActiveDirectory/Get-ADStaleComputerReport.ps1`: Reports on stale Active Directory computer accounts.
+- `ActiveDirectory/Get-ADTrustAuthenticationTypeReport.ps1`: Reports on AD Authentication type.
+- `ActiveDirectory/Get-ADTrustDirectionReport.ps1`: Reports on AD Direction.
+- `ActiveDirectory/Get-ADTrustHealthCheckReport.ps1`: Reports on AD Health check.
+- `ActiveDirectory/Get-ADTrustSIDFilteringReport.ps1`: Reports on AD SID filtering.
+- `ActiveDirectory/Get-ADTrustSelectiveAuthenticationReport.ps1`: Reports on AD Selective authentication.
+- `ActiveDirectory/Get-ADTrustTGTDelegationReport.ps1`: Reports on AD TGT delegation.
+- `ActiveDirectory/Get-ADTrustTransitivityReport.ps1`: Reports on AD Transitivity.
+- `ActiveDirectory/Get-ADUnconstrainedDelegationReport.ps1`: Reports on Active Directory unconstrained delegation.
+- `ActiveDirectory/Get-ADUserAccountControlReport.ps1`: Reports on Active Directory user account control flags.
+- `ActiveDirectory/Get-ADUserAdminCountReport.ps1`: Reports on Active Directory users with adminCount set.
+- `ActiveDirectory/Get-ADUserCertificateMappingReport.ps1`: Reports on Active Directory user certificate mappings.
+- `ActiveDirectory/Get-ADUserDelegationCapabilityReport.ps1`: Reports on Active Directory user delegation-related flags.
+- `ActiveDirectory/Get-ADUserDepartmentMismatchReport.ps1`: Reports on Active Directory users whose department and OU do not align.
+- `ActiveDirectory/Get-ADUserDescriptionCompletenessReport.ps1`: Reports on Active Directory user description completeness.
+- `ActiveDirectory/Get-ADUserHomeDirectoryReport.ps1`: Reports on Active Directory user home directories.
+- `ActiveDirectory/Get-ADUserKerberosEncryptionTypeReport.ps1`: Reports on Active Directory user Kerberos encryption types.
+- `ActiveDirectory/Get-ADUserLastLogonTrendReport.ps1`: Reports on Active Directory user last logon trends.
+- `ActiveDirectory/Get-ADUserLockoutReport.ps1`: Reports on locked-out Active Directory user accounts.
+- `ActiveDirectory/Get-ADUserManagerHierarchyReport.ps1`: Reports on Active Directory user manager chains.
+- `ActiveDirectory/Get-ADUserManagerlessAccountReport.ps1`: Reports on Active Directory user accounts without a manager.
+- `ActiveDirectory/Get-ADUserOfficeLocationReport.ps1`: Reports on Active Directory user office locations.
+- `ActiveDirectory/Get-ADUserPasswordExpiryForecastReport.ps1`: Reports on Active Directory user password expiration forecasts.
+- `ActiveDirectory/Get-ADUserPasswordNeverExpiresDetailReport.ps1`: Reports on Active Directory users with password never expires set.
+- `ActiveDirectory/Get-ADUserPasswordNotRequiredReport.ps1`: Reports on Active Directory users with password not required set.
+- `ActiveDirectory/Get-ADUserPreAuthNotRequiredReport.ps1`: Reports on Active Directory users not requiring Kerberos pre-authentication.
+- `ActiveDirectory/Get-ADUserProtectedUsersReport.ps1`: Reports on Active Directory users in the Protected Users group.
+- `ActiveDirectory/Get-ADUserProxyAddressReport.ps1`: Reports on Active Directory user proxy addresses.
+- `ActiveDirectory/Get-ADUserReversibleEncryptionReport.ps1`: Reports on Active Directory users with reversible encryption enabled.
+- `ActiveDirectory/Get-ADUserScriptPathReport.ps1`: Reports on Active Directory user script paths.
+- `ActiveDirectory/Get-ADUserSidHistoryDetailReport.ps1`: Reports on Active Directory user SIDHistory details.
+- `ActiveDirectory/Get-ADUserSmartcardRequirementReport.ps1`: Reports on Active Directory users requiring smart card logon.
+- `ActiveDirectory/Get-ADUserTerminalServicesProfileReport.ps1`: Reports on Active Directory user Terminal Services profile paths.
+- `ActiveDirectory/Get-ADWellKnownContainerReport.ps1`: Reports on Active Directory well-known containers.
 
 ## Entra ID Scripts
 
 These Entra ID PowerShell scripts help with tenant reporting, sign-in monitoring, guest user reviews, application credential tracking, Conditional Access visibility, role review, Microsoft Entra Connect version checking, MFA readiness, consent auditing, and service principal governance.
 
-- `EntraID/Export-EntraUsers.ps1`: E.
-- `EntraID/Get-EntraAdminConsentAppsReport.ps1`: R.
-- `EntraID/Get-EntraAppCredentialReport.ps1`: R.
-- `EntraID/Get-EntraAppOwnersReport.ps1`: R.
-- `EntraID/Get-EntraAuthMethodsPolicyReport.ps1`: R.
-- `EntraID/Get-EntraB2BInvitationsReport.ps1`: R.
-- `EntraID/Get-EntraConditionalAccessCoverageReport.ps1`: R.
-- `EntraID/Get-EntraConditionalAccessReport.ps1`: R.
-- `EntraID/Get-EntraConnectVersionReport.ps1`: R.
-- `EntraID/Get-EntraDeviceComplianceSummaryReport.ps1`: R.
-- `EntraID/Get-EntraDirectoryAuditReport.ps1`: R.
-- `EntraID/Get-EntraDirectoryQuotaReport.ps1`: R.
-- `EntraID/Get-EntraDirectoryRolesReport.ps1`: R.
-- `EntraID/Get-EntraDynamicGroupRulesReport.ps1`: R.
-- `EntraID/Get-EntraEnterpriseAppAssignmentsReport.ps1`: R.
-- `EntraID/Get-EntraExternalIdentitiesPolicyReport.ps1`: R.
-- `EntraID/Get-EntraGroupLifecycleReport.ps1`: R.
-- `EntraID/Get-EntraGroupMembersReport.ps1`: R.
-- `EntraID/Get-EntraGuestUsersReport.ps1`: R.
-- `EntraID/Get-EntraIdentityProtectionPolicyReport.ps1`: R.
-- `EntraID/Get-EntraInactiveUsersReport.ps1`: R.
-- `EntraID/Get-EntraMFARegistrationReport.ps1`: R.
-- `EntraID/Get-EntraNamedLocationsReport.ps1`: R.
-- `EntraID/Get-EntraOauthPermissionGrantsReport.ps1`: R.
-- `EntraID/Get-EntraPIMRoleEligibilityReport.ps1`: R.
-- `EntraID/Get-EntraPrivilegedRoleAssignmentsReport.ps1`: R.
-- `EntraID/Get-EntraRiskDetectionsReport.ps1`: R.
-- `EntraID/Get-EntraRiskyUsersReport.ps1`: R.
-- `EntraID/Get-EntraSecurityDefaultsReport.ps1`: R.
-- `EntraID/Get-EntraServicePrincipalReport.ps1`: R.
-- `EntraID/Get-EntraSignInReport.ps1`: E.
-- `EntraID/Get-EntraStaleAppCredentialsReport.ps1`: R.
-- `EntraID/Get-EntraTenantSettingsReport.ps1`: R.
-- `EntraID/Get-EntraUserLicenseReport.ps1`: R.
+- `EntraID/Export-EntraUsers.ps1`: Exports Entra ID user information for reporting purposes.
+- `EntraID/Get-EntraAccessReviewActivityReport.ps1`: Reports on Entra ID access review definitions in a activity view.
+- `EntraID/Get-EntraAccessReviewAssignmentReport.ps1`: Reports on Entra ID access review definitions in a assignment view.
+- `EntraID/Get-EntraAccessReviewDetailReport.ps1`: Reports on Entra ID access review definitions in a detail view.
+- `EntraID/Get-EntraAccessReviewPolicyReport.ps1`: Reports on Entra ID access review definitions in a policy view.
+- `EntraID/Get-EntraAccessReviewSummaryReport.ps1`: Reports on Entra ID access review definitions in a summary view.
+- `EntraID/Get-EntraAdminConsentAppsReport.ps1`: Reports on Entra ID applications with tenant-wide admin consent grants.
+- `EntraID/Get-EntraAdministrativeUnitActivityReport.ps1`: Reports on Entra ID administrative units in a activity view.
+- `EntraID/Get-EntraAdministrativeUnitAssignmentReport.ps1`: Reports on Entra ID administrative units in a assignment view.
+- `EntraID/Get-EntraAdministrativeUnitDetailReport.ps1`: Reports on Entra ID administrative units in a detail view.
+- `EntraID/Get-EntraAdministrativeUnitPolicyReport.ps1`: Reports on Entra ID administrative units in a policy view.
+- `EntraID/Get-EntraAdministrativeUnitSummaryReport.ps1`: Reports on Entra ID administrative units in a summary view.
+- `EntraID/Get-EntraAppCredentialReport.ps1`: Reports on Entra ID application registrations and their credential expiry.
+- `EntraID/Get-EntraAppOwnersReport.ps1`: Reports on Entra ID application owners.
+- `EntraID/Get-EntraApplicationActivityReport.ps1`: Reports on Entra ID application registrations in a activity view.
+- `EntraID/Get-EntraApplicationAssignmentReport.ps1`: Reports on Entra ID application registrations in a assignment view.
+- `EntraID/Get-EntraApplicationDetailReport.ps1`: Reports on Entra ID application registrations in a detail view.
+- `EntraID/Get-EntraApplicationPolicyReport.ps1`: Reports on Entra ID application registrations in a policy view.
+- `EntraID/Get-EntraApplicationSummaryReport.ps1`: Reports on Entra ID application registrations in a summary view.
+- `EntraID/Get-EntraAuthMethodsPolicyReport.ps1`: Reports on Microsoft Entra authentication methods policy.
+- `EntraID/Get-EntraAuthenticationMethodActivityReport.ps1`: Reports on Entra ID authentication method registration details in a activity view.
+- `EntraID/Get-EntraAuthenticationMethodAssignmentReport.ps1`: Reports on Entra ID authentication method registration details in a assignment view.
+- `EntraID/Get-EntraAuthenticationMethodDetailReport.ps1`: Reports on Entra ID authentication method registration details in a detail view.
+- `EntraID/Get-EntraAuthenticationMethodPolicyReport.ps1`: Reports on Entra ID authentication method registration details in a policy view.
+- `EntraID/Get-EntraAuthenticationMethodSummaryReport.ps1`: Reports on Entra ID authentication method registration details in a summary view.
+- `EntraID/Get-EntraB2BInvitationsReport.ps1`: Reports on Microsoft Entra B2B invitations.
+- `EntraID/Get-EntraConditionalAccessActivityReport.ps1`: Reports on Entra ID Conditional Access policies in a activity view.
+- `EntraID/Get-EntraConditionalAccessAssignmentReport.ps1`: Reports on Entra ID Conditional Access policies in a assignment view.
+- `EntraID/Get-EntraConditionalAccessCoverageReport.ps1`: Reports on Microsoft Entra Conditional Access coverage.
+- `EntraID/Get-EntraConditionalAccessDetailReport.ps1`: Reports on Entra ID Conditional Access policies in a detail view.
+- `EntraID/Get-EntraConditionalAccessPolicyReport.ps1`: Reports on Entra ID Conditional Access policies in a policy view.
+- `EntraID/Get-EntraConditionalAccessReport.ps1`: Reports on Entra ID Conditional Access policies.
+- `EntraID/Get-EntraConditionalAccessSummaryReport.ps1`: Reports on Entra ID Conditional Access policies in a summary view.
+- `EntraID/Get-EntraConnectVersionReport.ps1`: Reports on Microsoft Entra Connect version status.
+- `EntraID/Get-EntraCrossTenantAccessActivityReport.ps1`: Reports on Entra ID cross-tenant access settings in a activity view.
+- `EntraID/Get-EntraCrossTenantAccessAssignmentReport.ps1`: Reports on Entra ID cross-tenant access settings in a assignment view.
+- `EntraID/Get-EntraCrossTenantAccessDetailReport.ps1`: Reports on Entra ID cross-tenant access settings in a detail view.
+- `EntraID/Get-EntraCrossTenantAccessPolicyReport.ps1`: Reports on Entra ID cross-tenant access settings in a policy view.
+- `EntraID/Get-EntraCrossTenantAccessSummaryReport.ps1`: Reports on Entra ID cross-tenant access settings in a summary view.
+- `EntraID/Get-EntraDeviceActivityReport.ps1`: Reports on Entra ID devices in a activity view.
+- `EntraID/Get-EntraDeviceAssignmentReport.ps1`: Reports on Entra ID devices in a assignment view.
+- `EntraID/Get-EntraDeviceComplianceSummaryReport.ps1`: Reports on Microsoft Entra device compliance summary.
+- `EntraID/Get-EntraDeviceDetailReport.ps1`: Reports on Entra ID devices in a detail view.
+- `EntraID/Get-EntraDevicePolicyReport.ps1`: Reports on Entra ID devices in a policy view.
+- `EntraID/Get-EntraDeviceSummaryReport.ps1`: Reports on Entra ID devices in a summary view.
+- `EntraID/Get-EntraDirectoryAuditActivityReport.ps1`: Reports on Entra ID directory audit events in a activity view.
+- `EntraID/Get-EntraDirectoryAuditAssignmentReport.ps1`: Reports on Entra ID directory audit events in a assignment view.
+- `EntraID/Get-EntraDirectoryAuditDetailReport.ps1`: Reports on Entra ID directory audit events in a detail view.
+- `EntraID/Get-EntraDirectoryAuditPolicyReport.ps1`: Reports on Entra ID directory audit events in a policy view.
+- `EntraID/Get-EntraDirectoryAuditReport.ps1`: Reports on Entra ID directory audit events.
+- `EntraID/Get-EntraDirectoryAuditSummaryReport.ps1`: Reports on Entra ID directory audit events in a summary view.
+- `EntraID/Get-EntraDirectoryQuotaReport.ps1`: Reports on Microsoft Entra directory footprint and quota-related counts.
+- `EntraID/Get-EntraDirectoryRolesReport.ps1`: Reports on Entra ID directory roles and their members.
+- `EntraID/Get-EntraDomainActivityReport.ps1`: Reports on Entra ID verified domains in a activity view.
+- `EntraID/Get-EntraDomainAssignmentReport.ps1`: Reports on Entra ID verified domains in a assignment view.
+- `EntraID/Get-EntraDomainDetailReport.ps1`: Reports on Entra ID verified domains in a detail view.
+- `EntraID/Get-EntraDomainPolicyReport.ps1`: Reports on Entra ID verified domains in a policy view.
+- `EntraID/Get-EntraDomainSummaryReport.ps1`: Reports on Entra ID verified domains in a summary view.
+- `EntraID/Get-EntraDynamicGroupRulesReport.ps1`: Reports on Microsoft Entra dynamic group rules.
+- `EntraID/Get-EntraEnterpriseAppAssignmentsReport.ps1`: Reports on Microsoft Entra enterprise app assignments.
+- `EntraID/Get-EntraEntitlementManagementActivityReport.ps1`: Reports on Entra ID entitlement management access packages in a activity view.
+- `EntraID/Get-EntraEntitlementManagementAssignmentReport.ps1`: Reports on Entra ID entitlement management access packages in a assignment view.
+- `EntraID/Get-EntraEntitlementManagementDetailReport.ps1`: Reports on Entra ID entitlement management access packages in a detail view.
+- `EntraID/Get-EntraEntitlementManagementPolicyReport.ps1`: Reports on Entra ID entitlement management access packages in a policy view.
+- `EntraID/Get-EntraEntitlementManagementSummaryReport.ps1`: Reports on Entra ID entitlement management access packages in a summary view.
+- `EntraID/Get-EntraExternalCollaborationActivityReport.ps1`: Reports on Entra ID guest users in a activity view.
+- `EntraID/Get-EntraExternalCollaborationAssignmentReport.ps1`: Reports on Entra ID guest users in a assignment view.
+- `EntraID/Get-EntraExternalCollaborationDetailReport.ps1`: Reports on Entra ID guest users in a detail view.
+- `EntraID/Get-EntraExternalCollaborationPolicyReport.ps1`: Reports on Entra ID guest users in a policy view.
+- `EntraID/Get-EntraExternalCollaborationSummaryReport.ps1`: Reports on Entra ID guest users in a summary view.
+- `EntraID/Get-EntraExternalIdentitiesPolicyReport.ps1`: Reports on Microsoft Entra external identities policy.
+- `EntraID/Get-EntraGroupActivityReport.ps1`: Reports on Entra ID groups in a activity view.
+- `EntraID/Get-EntraGroupAssignmentReport.ps1`: Reports on Entra ID groups in a assignment view.
+- `EntraID/Get-EntraGroupDetailReport.ps1`: Reports on Entra ID groups in a detail view.
+- `EntraID/Get-EntraGroupLifecycleReport.ps1`: Reports on Microsoft Entra group lifecycle details.
+- `EntraID/Get-EntraGroupMembersReport.ps1`: Retrieves and reports group membership information for Entra ID groups.
+- `EntraID/Get-EntraGroupPolicyReport.ps1`: Reports on Entra ID groups in a policy view.
+- `EntraID/Get-EntraGroupSummaryReport.ps1`: Reports on Entra ID groups in a summary view.
+- `EntraID/Get-EntraGuestUsersReport.ps1`: Reports on Entra ID guest user accounts.
+- `EntraID/Get-EntraIdentityProtectionActivityReport.ps1`: Reports on Entra ID risky users in a activity view.
+- `EntraID/Get-EntraIdentityProtectionAssignmentReport.ps1`: Reports on Entra ID risky users in a assignment view.
+- `EntraID/Get-EntraIdentityProtectionDetailReport.ps1`: Reports on Entra ID risky users in a detail view.
+- `EntraID/Get-EntraIdentityProtectionPolicyReport.ps1`: Reports on Microsoft Entra Identity Protection policies.
+- `EntraID/Get-EntraIdentityProtectionPolicySummaryReport.ps1`: Reports on Entra ID risky users in a policy view.
+- `EntraID/Get-EntraIdentityProtectionSummaryReport.ps1`: Reports on Entra ID risky users in a summary view.
+- `EntraID/Get-EntraInactiveUsersReport.ps1`: Reports on inactive Entra ID user accounts.
+- `EntraID/Get-EntraLicenseActivityReport.ps1`: Reports on Entra ID subscribed SKUs in a activity view.
+- `EntraID/Get-EntraLicenseAssignmentReport.ps1`: Reports on Entra ID subscribed SKUs in a assignment view.
+- `EntraID/Get-EntraLicenseDetailReport.ps1`: Reports on Entra ID subscribed SKUs in a detail view.
+- `EntraID/Get-EntraLicensePolicyReport.ps1`: Reports on Entra ID subscribed SKUs in a policy view.
+- `EntraID/Get-EntraLicenseSummaryReport.ps1`: Reports on Entra ID subscribed SKUs in a summary view.
+- `EntraID/Get-EntraMFARegistrationReport.ps1`: Reports on Entra ID MFA registration status.
+- `EntraID/Get-EntraNamedLocationsReport.ps1`: Reports on Microsoft Entra named locations.
+- `EntraID/Get-EntraOauthPermissionGrantsReport.ps1`: Reports on Microsoft Entra OAuth permission grants.
+- `EntraID/Get-EntraPIMRoleEligibilityReport.ps1`: Reports on Microsoft Entra PIM role eligibility.
+- `EntraID/Get-EntraPrivilegedIdentityManagementActivityReport.ps1`: Reports on Entra ID privileged role schedule instances in a activity view.
+- `EntraID/Get-EntraPrivilegedIdentityManagementAssignmentReport.ps1`: Reports on Entra ID privileged role schedule instances in a assignment view.
+- `EntraID/Get-EntraPrivilegedIdentityManagementDetailReport.ps1`: Reports on Entra ID privileged role schedule instances in a detail view.
+- `EntraID/Get-EntraPrivilegedIdentityManagementPolicyReport.ps1`: Reports on Entra ID privileged role schedule instances in a policy view.
+- `EntraID/Get-EntraPrivilegedIdentityManagementSummaryReport.ps1`: Reports on Entra ID privileged role schedule instances in a summary view.
+- `EntraID/Get-EntraPrivilegedRoleAssignmentsReport.ps1`: Reports on privileged Entra ID role assignments.
+- `EntraID/Get-EntraRiskDetectionsReport.ps1`: Reports on Entra ID risk detections.
+- `EntraID/Get-EntraRiskyUsersReport.ps1`: Reports on risky Entra ID users.
+- `EntraID/Get-EntraRoleManagementActivityReport.ps1`: Reports on Entra ID directory roles in a activity view.
+- `EntraID/Get-EntraRoleManagementAssignmentReport.ps1`: Reports on Entra ID directory roles in a assignment view.
+- `EntraID/Get-EntraRoleManagementDetailReport.ps1`: Reports on Entra ID directory roles in a detail view.
+- `EntraID/Get-EntraRoleManagementPolicyReport.ps1`: Reports on Entra ID directory roles in a policy view.
+- `EntraID/Get-EntraRoleManagementSummaryReport.ps1`: Reports on Entra ID directory roles in a summary view.
+- `EntraID/Get-EntraSecurityDefaultsReport.ps1`: Reports on Microsoft Entra security defaults.
+- `EntraID/Get-EntraServicePrincipalActivityReport.ps1`: Reports on Entra ID service principals in a activity view.
+- `EntraID/Get-EntraServicePrincipalAssignmentReport.ps1`: Reports on Entra ID service principals in a assignment view.
+- `EntraID/Get-EntraServicePrincipalDetailReport.ps1`: Reports on Entra ID service principals in a detail view.
+- `EntraID/Get-EntraServicePrincipalPolicyReport.ps1`: Reports on Entra ID service principals in a policy view.
+- `EntraID/Get-EntraServicePrincipalReport.ps1`: Reports on Entra ID service principal permissions and assignments.
+- `EntraID/Get-EntraServicePrincipalSummaryReport.ps1`: Reports on Entra ID service principals in a summary view.
+- `EntraID/Get-EntraSignInActivityReport.ps1`: Reports on Entra ID sign-in activity in a activity view.
+- `EntraID/Get-EntraSignInAssignmentReport.ps1`: Reports on Entra ID sign-in activity in a assignment view.
+- `EntraID/Get-EntraSignInDetailReport.ps1`: Reports on Entra ID sign-in activity in a detail view.
+- `EntraID/Get-EntraSignInPolicyReport.ps1`: Reports on Entra ID sign-in activity in a policy view.
+- `EntraID/Get-EntraSignInReport.ps1`: Exports Entra ID sign-in activity report.
+- `EntraID/Get-EntraSignInSummaryReport.ps1`: Reports on Entra ID sign-in activity in a summary view.
+- `EntraID/Get-EntraStaleAppCredentialsReport.ps1`: Reports on stale Microsoft Entra application credentials.
+- `EntraID/Get-EntraTenantActivityReport.ps1`: Reports on Entra ID tenant organization details in a activity view.
+- `EntraID/Get-EntraTenantAssignmentReport.ps1`: Reports on Entra ID tenant organization details in a assignment view.
+- `EntraID/Get-EntraTenantDetailReport.ps1`: Reports on Entra ID tenant organization details in a detail view.
+- `EntraID/Get-EntraTenantPolicyReport.ps1`: Reports on Entra ID tenant organization details in a policy view.
+- `EntraID/Get-EntraTenantSettingsReport.ps1`: Reports on Microsoft Entra tenant settings.
+- `EntraID/Get-EntraTenantSummaryReport.ps1`: Reports on Entra ID tenant organization details in a summary view.
+- `EntraID/Get-EntraUserActivityReport.ps1`: Reports on Entra ID users in a activity view.
+- `EntraID/Get-EntraUserAssignmentReport.ps1`: Reports on Entra ID users in a assignment view.
+- `EntraID/Get-EntraUserDetailReport.ps1`: Reports on Entra ID users in a detail view.
+- `EntraID/Get-EntraUserLicenseReport.ps1`: Reports on Entra ID user license assignments.
+- `EntraID/Get-EntraUserPolicyReport.ps1`: Reports on Entra ID users in a policy view.
+- `EntraID/Get-EntraUserSummaryReport.ps1`: Reports on Entra ID users in a summary view.
 
 ## Azure Scripts
 
 These Azure PowerShell scripts are designed for subscription inventory, RBAC review, tag compliance, network security review, virtual machine reporting, storage security checks, Key Vault expiry monitoring, SQL reporting, public IP visibility, App Service governance, policy compliance, advisor optimization, and load balancer visibility.
 
-- `Azure/Export-AzureRoleAssignments.ps1`: E.
-- `Azure/Get-AzureAdvisorRecommendationsReport.ps1`: R.
-- `Azure/Get-AzureAKSClusterReport.ps1`: R.
-- `Azure/Get-AzureApplicationGatewayReport.ps1`: R.
-- `Azure/Get-AzureAppServicePlanReport.ps1`: R.
-- `Azure/Get-AzureAppServiceReport.ps1`: R.
-- `Azure/Get-AzureAutomationAccountReport.ps1`: R.
-- `Azure/Get-AzureBackupVaultReport.ps1`: R.
-- `Azure/Get-AzureBastionHostReport.ps1`: R.
-- `Azure/Get-AzureContainerRegistryReport.ps1`: R.
-- `Azure/Get-AzureCosmosDBReport.ps1`: R.
-- `Azure/Get-AzureCostByResourceGroupReport.ps1`: R.
-- `Azure/Get-AzureDDoSPlanReport.ps1`: R.
-- `Azure/Get-AzureFirewallReport.ps1`: R.
-- `Azure/Get-AzureFunctionAppReport.ps1`: R.
-- `Azure/Get-AzureKeyVaultExpiryReport.ps1`: R.
-- `Azure/Get-AzureLoadBalancerReport.ps1`: R.
-- `Azure/Get-AzureLogicAppReport.ps1`: R.
-- `Azure/Get-AzureManagedDiskReport.ps1`: R.
-- `Azure/Get-AzureMonitorAlertRuleReport.ps1`: R.
-- `Azure/Get-AzureNSGRulesReport.ps1`: R.
-- `Azure/Get-AzurePolicyComplianceReport.ps1`: R.
-- `Azure/Get-AzurePrivateEndpointReport.ps1`: R.
-- `Azure/Get-AzurePublicIPReport.ps1`: R.
-- `Azure/Get-AzureRecoveryServicesReport.ps1`: R.
-- `Azure/Get-AzureRedisCacheReport.ps1`: R.
-- `Azure/Get-AzureResourcesReport.ps1`: R.
-- `Azure/Get-AzureRouteTableReport.ps1`: R.
-- `Azure/Get-AzureSQLDatabaseReport.ps1`: R.
-- `Azure/Get-AzureStorageAccountReport.ps1`: R.
-- `Azure/Get-AzureSubnetDelegationReport.ps1`: R.
-- `Azure/Get-AzureTagComplianceReport.ps1`: R.
-- `Azure/Get-AzureVirtualNetworkReport.ps1`: R.
-- `Azure/Get-AzureVMStatusReport.ps1`: R.
+- `Azure/Export-AzureRoleAssignments.ps1`: Exports Azure role assignment information for RBAC review.
+- `Azure/Get-AzureAKSClusterReport.ps1`: Reports on Azure Kubernetes Service clusters.
+- `Azure/Get-AzureAdvisorRecommendationsReport.ps1`: Reports on Azure Advisor recommendations across subscriptions.
+- `Azure/Get-AzureAppServicePlanReport.ps1`: Reports on Azure App Service plans across subscriptions.
+- `Azure/Get-AzureAppServiceReport.ps1`: Reports on Azure App Service applications.
+- `Azure/Get-AzureApplicationGatewayReport.ps1`: Reports on Azure Application Gateways.
+- `Azure/Get-AzureAutomationAccountReport.ps1`: Reports on Azure Automation accounts.
+- `Azure/Get-AzureBackupVaultReport.ps1`: Reports on Azure Backup vaults.
+- `Azure/Get-AzureBastionHostReport.ps1`: Reports on Azure Bastion hosts.
+- `Azure/Get-AzureContainerRegistryReport.ps1`: Reports on Azure Container Registries.
+- `Azure/Get-AzureCosmosDBReport.ps1`: Reports on Azure Cosmos DB accounts.
+- `Azure/Get-AzureCostByResourceGroupReport.ps1`: Reports on Azure cost by resource group.
+- `Azure/Get-AzureDDoSPlanReport.ps1`: Reports on Azure DDoS Protection plans.
+- `Azure/Get-AzureFirewallReport.ps1`: Reports on Azure Firewall deployments.
+- `Azure/Get-AzureFunctionAppReport.ps1`: Reports on Azure Function Apps.
+- `Azure/Get-AzureKeyVaultExpiryReport.ps1`: Reports on Azure Key Vault secrets and certificate expiration.
+- `Azure/Get-AzureLoadBalancerReport.ps1`: Reports on Azure load balancers across subscriptions.
+- `Azure/Get-AzureLogicAppReport.ps1`: Reports on Azure Logic Apps.
+- `Azure/Get-AzureManagedDiskReport.ps1`: Reports on Azure managed disks.
+- `Azure/Get-AzureMonitorAlertRuleReport.ps1`: Reports on Azure Monitor alert rules.
+- `Azure/Get-AzureNSGRulesReport.ps1`: Reports on Azure Network Security Group rules.
+- `Azure/Get-AzurePolicyComplianceReport.ps1`: Reports on Azure Policy non-compliance across subscriptions.
+- `Azure/Get-AzurePrivateEndpointReport.ps1`: Reports on Azure private endpoints.
+- `Azure/Get-AzurePublicIPReport.ps1`: Reports on Azure public IP addresses.
+- `Azure/Get-AzureRecoveryServicesReport.ps1`: Reports on Azure Recovery Services vaults.
+- `Azure/Get-AzureRedisCacheReport.ps1`: Reports on Azure Redis Cache instances.
+- `Azure/Get-AzureResourcesReport.ps1`: Retrieves and reports on Azure resources across subscriptions.
+- `Azure/Get-AzureRouteTableReport.ps1`: Reports on Azure route tables.
+- `Azure/Get-AzureSQLDatabaseReport.ps1`: Reports on Azure SQL databases and their configuration.
+- `Azure/Get-AzureStorageAccountReport.ps1`: Reports on Azure storage accounts and their configuration.
+- `Azure/Get-AzureSubnetDelegationReport.ps1`: Reports on delegated Azure subnets.
+- `Azure/Get-AzureTagComplianceReport.ps1`: Reports on Azure resource group tags and compliance.
+- `Azure/Get-AzureVMStatusReport.ps1`: Reports on Azure virtual machine status and sizing.
+- `Azure/Get-AzureVirtualNetworkReport.ps1`: Reports on Azure virtual networks.
 
 ## Microsoft 365 Scripts
 
 These Microsoft 365 PowerShell scripts support license reporting, Exchange Online administration, mailbox auditing, Teams reporting, MFA review, OneDrive and SharePoint usage analysis, mail flow governance, forwarding review, permission auditing, and service health tracking.
 
-- `Microsoft365/Export-M365Licenses.ps1`: E.
-- `Microsoft365/Export-TeamsReport.ps1`: E.
-- `Microsoft365/Get-DistributionGroupReport.ps1`: R.
-- `Microsoft365/Get-ExchangeAcceptedDomainReport.ps1`: R.
-- `Microsoft365/Get-ExchangeConnectorReport.ps1`: R.
-- `Microsoft365/Get-ExchangeMobileDeviceAccessReport.ps1`: R.
-- `Microsoft365/Get-M365AntiPhishPolicyReport.ps1`: R.
-- `Microsoft365/Get-M365AppUsageReport.ps1`: R.
-- `Microsoft365/Get-M365DLPPolicyReport.ps1`: R.
-- `Microsoft365/Get-M365GuestAccessSettingsReport.ps1`: R.
-- `Microsoft365/Get-M365InactiveMailboxReport.ps1`: R.
-- `Microsoft365/Get-M365LicenseUtilizationSummaryReport.ps1`: R.
-- `Microsoft365/Get-M365MailboxArchiveStatusReport.ps1`: R.
-- `Microsoft365/Get-M365MailboxSizeSummaryReport.ps1`: R.
-- `Microsoft365/Get-M365MFAStatusReport.ps1`: R.
-- `Microsoft365/Get-M365RetentionPolicyReport.ps1`: R.
-- `Microsoft365/Get-M365RoleAssignmentReport.ps1`: R.
-- `Microsoft365/Get-M365ServiceHealthReport.ps1`: R.
-- `Microsoft365/Get-M365UnifiedGroupReport.ps1`: R.
-- `Microsoft365/Get-M365UserSignInSummaryReport.ps1`: R.
-- `Microsoft365/Get-MailboxAuditStatusReport.ps1`: R.
-- `Microsoft365/Get-MailboxForwardingReport.ps1`: R.
-- `Microsoft365/Get-MailboxPermissionReport.ps1`: R.
-- `Microsoft365/Get-MailboxReport.ps1`: R.
-- `Microsoft365/Get-MailFlowRulesReport.ps1`: R.
-- `Microsoft365/Get-OneDriveSharingLinksReport.ps1`: R.
-- `Microsoft365/Get-OneDriveUsageReport.ps1`: R.
-- `Microsoft365/Get-SharedMailboxReport.ps1`: R.
-- `Microsoft365/Get-SharePointExternalSharingReport.ps1`: R.
-- `Microsoft365/Get-SharePointSiteCollectionAdminReport.ps1`: R.
-- `Microsoft365/Get-SharePointSiteUsageReport.ps1`: R.
-- `Microsoft365/Get-TeamsChannelInventoryReport.ps1`: R.
-- `Microsoft365/Get-TeamsPolicyAssignmentReport.ps1`: R.
-- `Microsoft365/Get-TeamsUserActivityReport.ps1`: R.
+- `Microsoft365/Export-M365Licenses.ps1`: Exports Microsoft 365 license assignment information.
+- `Microsoft365/Export-TeamsReport.ps1`: Exports Microsoft Teams information for reporting purposes.
+- `Microsoft365/Get-DistributionGroupReport.ps1`: Reports on Microsoft 365 distribution groups and their members.
+- `Microsoft365/Get-ExchangeAcceptedDomainHealthReport.ps1`: Reports on Exchange Online accepted domains.
+- `Microsoft365/Get-ExchangeAcceptedDomainReport.ps1`: Reports on Exchange Online accepted domains.
+- `Microsoft365/Get-ExchangeAddressListReport.ps1`: Reports on Exchange Online address lists.
+- `Microsoft365/Get-ExchangeCalendarProcessingReport.ps1`: Reports on Exchange Online calendar processing settings.
+- `Microsoft365/Get-ExchangeConnectorReport.ps1`: Reports on Exchange Online connectors.
+- `Microsoft365/Get-ExchangeDistributionGroupMemberSummaryReport.ps1`: Reports on Exchange Online distribution group membership.
+- `Microsoft365/Get-ExchangeInboxRuleReport.ps1`: Reports on Exchange Online inbox rules.
+- `Microsoft365/Get-ExchangeJournalRuleReport.ps1`: Reports on Exchange Online journal rules.
+- `Microsoft365/Get-ExchangeMailContactReport.ps1`: Reports on Exchange Online mail contacts.
+- `Microsoft365/Get-ExchangeMailboxArchiveReport.ps1`: Reports on Exchange Online archive mailbox status.
+- `Microsoft365/Get-ExchangeMailboxDelegationSummaryReport.ps1`: Reports on Exchange Online mailbox delegation.
+- `Microsoft365/Get-ExchangeMailboxFolderPermissionReport.ps1`: Reports on Exchange Online mailbox folder permissions.
+- `Microsoft365/Get-ExchangeMailboxHoldReport.ps1`: Reports on Exchange Online mailbox hold status.
+- `Microsoft365/Get-ExchangeMailboxStatisticsReport.ps1`: Reports on Exchange Online mailbox statistics.
+- `Microsoft365/Get-ExchangeMessageTraceSummaryReport.ps1`: Reports on Exchange Online message trace activity.
+- `Microsoft365/Get-ExchangeMobileDeviceAccessReport.ps1`: Reports on Exchange Online mobile device access configuration.
+- `Microsoft365/Get-ExchangeMobileDeviceMailboxPolicyReport.ps1`: Reports on Exchange Online mobile device mailbox policies.
+- `Microsoft365/Get-ExchangeOrganizationConfigReport.ps1`: Reports on Exchange Online organization configuration.
+- `Microsoft365/Get-ExchangeOrganizationRelationshipReport.ps1`: Reports on Exchange Online organization relationships.
+- `Microsoft365/Get-ExchangeOutboundSpamFilterPolicyReport.ps1`: Reports on Exchange Online outbound spam filter policies.
+- `Microsoft365/Get-ExchangeRemoteDomainReport.ps1`: Reports on Exchange Online remote domains.
+- `Microsoft365/Get-ExchangeRetentionPolicyReport.ps1`: Reports on Exchange Online retention policies.
+- `Microsoft365/Get-ExchangeRetentionPolicyTagReport.ps1`: Reports on Exchange Online retention policy tags.
+- `Microsoft365/Get-ExchangeSharedMailboxDelegationReport.ps1`: Reports on Exchange Online shared mailbox delegation.
+- `Microsoft365/Get-ExchangeTransportConfigReport.ps1`: Reports on Exchange Online transport configuration.
+- `Microsoft365/Get-ExchangeTransportRuleReport.ps1`: Reports on Exchange Online transport rules.
+- `Microsoft365/Get-ExchangeUnifiedGroupMailboxReport.ps1`: Reports on Exchange Online Microsoft 365 group mailboxes.
+- `Microsoft365/Get-ExchangeUserMailboxReport.ps1`: Reports on Exchange Online user mailboxes.
+- `Microsoft365/Get-M365AdminRoleAssignmentReport.ps1`: Reports on Microsoft 365 admin role assignments.
+- `Microsoft365/Get-M365AntiPhishPolicyReport.ps1`: Reports on Microsoft 365 anti-phishing policies.
+- `Microsoft365/Get-M365AppUsageReport.ps1`: Reports on Microsoft 365 app usage.
+- `Microsoft365/Get-M365AuditLogSummaryReport.ps1`: Reports on Microsoft 365 audit log activity.
+- `Microsoft365/Get-M365DLPPolicyReport.ps1`: Reports on Microsoft 365 DLP policies.
+- `Microsoft365/Get-M365DeletedItemsReport.ps1`: Reports on deleted Microsoft 365 mailboxes.
+- `Microsoft365/Get-M365DeletedUserMailboxReport.ps1`: Reports on deleted user mailboxes in Microsoft 365.
+- `Microsoft365/Get-M365GuestAccessSettingsReport.ps1`: Reports on Microsoft 365 guest access settings.
+- `Microsoft365/Get-M365InactiveMailboxReport.ps1`: Reports on inactive Exchange Online mailboxes.
+- `Microsoft365/Get-M365LicenseAssignmentDetailReport.ps1`: Reports on Microsoft 365 license assignments.
+- `Microsoft365/Get-M365LicenseUtilizationSummaryReport.ps1`: Reports on Microsoft 365 license utilization.
+- `Microsoft365/Get-M365MFAStatusReport.ps1`: Reports on Microsoft 365 MFA registration status for all users.
+- `Microsoft365/Get-M365MailboxArchiveStatusReport.ps1`: Reports on Microsoft 365 mailbox archive status.
+- `Microsoft365/Get-M365MailboxDelegationSummaryReport.ps1`: Reports on Microsoft 365 mailbox delegation.
+- `Microsoft365/Get-M365MailboxSizeSummaryReport.ps1`: Reports on Microsoft 365 mailbox sizes.
+- `Microsoft365/Get-M365MessageCenterSummaryReport.ps1`: Reports on Microsoft 365 message center items.
+- `Microsoft365/Get-M365PasswordlessAdoptionReport.ps1`: Reports on Microsoft 365 passwordless adoption.
+- `Microsoft365/Get-M365PrivilegeReviewReport.ps1`: Reports on Microsoft 365 privileged role coverage.
+- `Microsoft365/Get-M365RetentionLabelReport.ps1`: Reports on Microsoft 365 retention labels.
+- `Microsoft365/Get-M365RetentionPolicyReport.ps1`: Reports on Microsoft 365 retention policies.
+- `Microsoft365/Get-M365RoleAssignmentReport.ps1`: Reports on Microsoft 365 directory role assignments.
+- `Microsoft365/Get-M365SecureScoreHistoryReport.ps1`: Reports on Microsoft 365 secure score history.
+- `Microsoft365/Get-M365SecurityAlertSummaryReport.ps1`: Reports on Microsoft 365 security alerts.
+- `Microsoft365/Get-M365SensitivityLabelReport.ps1`: Reports on Microsoft 365 sensitivity labels.
+- `Microsoft365/Get-M365ServiceAnnouncementReport.ps1`: Reports on Microsoft 365 service announcements.
+- `Microsoft365/Get-M365ServiceHealthDetailReport.ps1`: Reports on Microsoft 365 service health details.
+- `Microsoft365/Get-M365ServiceHealthReport.ps1`: Reports on Microsoft 365 service health status.
+- `Microsoft365/Get-M365SharingPolicyReport.ps1`: Reports on Microsoft 365 sharing policy settings.
+- `Microsoft365/Get-M365SignInRiskSummaryReport.ps1`: Reports on Microsoft 365 sign-in risk.
+- `Microsoft365/Get-M365SpamFilterPolicyReport.ps1`: Reports on Microsoft 365 spam filter policies.
+- `Microsoft365/Get-M365TenantBrandingReport.ps1`: Reports on Microsoft 365 tenant branding.
+- `Microsoft365/Get-M365TenantDomainReport.ps1`: Reports on Microsoft 365 tenant domains.
+- `Microsoft365/Get-M365TenantUsageSummaryReport.ps1`: Reports on Microsoft 365 tenant usage summaries.
+- `Microsoft365/Get-M365UnifiedAuditLogReport.ps1`: Reports on Microsoft 365 unified audit log activity.
+- `Microsoft365/Get-M365UnifiedGroupMembershipSummaryReport.ps1`: Reports on Microsoft 365 unified group membership.
+- `Microsoft365/Get-M365UnifiedGroupReport.ps1`: Reports on Microsoft 365 unified groups.
+- `Microsoft365/Get-M365UserMailboxSummaryReport.ps1`: Reports on Microsoft 365 user mailboxes.
+- `Microsoft365/Get-M365UserSignInSummaryReport.ps1`: Reports on Microsoft 365 user sign-in activity.
+- `Microsoft365/Get-M365WorkloadAdoptionReport.ps1`: Reports on Microsoft 365 workload adoption.
+- `Microsoft365/Get-MailFlowRulesReport.ps1`: Reports on mail transport rules in Exchange Online.
+- `Microsoft365/Get-MailboxAuditStatusReport.ps1`: Reports on Exchange Online mailbox audit status.
+- `Microsoft365/Get-MailboxForwardingReport.ps1`: Reports on mailbox forwarding settings in Exchange Online.
+- `Microsoft365/Get-MailboxPermissionReport.ps1`: Reports on mailbox permission assignments in Exchange Online.
+- `Microsoft365/Get-MailboxReport.ps1`: Retrieves and reports mailbox information from Exchange Online.
+- `Microsoft365/Get-OneDriveAccountOwnershipReport.ps1`: Reports on OneDrive account ownership.
+- `Microsoft365/Get-OneDriveFileSharingReport.ps1`: Reports on OneDrive file sharing settings.
+- `Microsoft365/Get-OneDriveInactiveAccountReport.ps1`: Reports on inactive OneDrive accounts.
+- `Microsoft365/Get-OneDriveKnownFolderMoveReport.ps1`: Reports on OneDrive known folder move readiness.
+- `Microsoft365/Get-OneDriveSharingLinksReport.ps1`: Reports on OneDrive for Business sharing settings.
+- `Microsoft365/Get-OneDriveStorageQuotaReport.ps1`: Reports on OneDrive storage quotas.
+- `Microsoft365/Get-OneDriveUsageReport.ps1`: Reports on OneDrive for Business usage across the tenant.
+- `Microsoft365/Get-SharePointAccessRequestSettingsReport.ps1`: Reports on SharePoint Online access request settings.
+- `Microsoft365/Get-SharePointAnonymousSharingReport.ps1`: Reports on SharePoint Online anonymous sharing configuration.
+- `Microsoft365/Get-SharePointAppCatalogReport.ps1`: Reports on SharePoint Online app catalog settings.
+- `Microsoft365/Get-SharePointExternalSharingReport.ps1`: Reports on SharePoint Online external sharing settings.
+- `Microsoft365/Get-SharePointExternalUserReport.ps1`: Reports on SharePoint Online external users.
+- `Microsoft365/Get-SharePointHubSiteReport.ps1`: Reports on SharePoint Online hub sites.
+- `Microsoft365/Get-SharePointModernTeamSiteReport.ps1`: Reports on SharePoint Online modern team sites.
+- `Microsoft365/Get-SharePointOneDriveArchiveReport.ps1`: Reports on SharePoint Online OneDrive archive status.
+- `Microsoft365/Get-SharePointOneDriveExternalSharingReport.ps1`: Reports on SharePoint Online OneDrive external sharing.
+- `Microsoft365/Get-SharePointOneDriveSyncReport.ps1`: Reports on SharePoint Online OneDrive sync settings.
+- `Microsoft365/Get-SharePointPageAnalyticsReport.ps1`: Reports on SharePoint Online site activity timing.
+- `Microsoft365/Get-SharePointSiteCollectionAdminReport.ps1`: Reports on SharePoint site collection administrators.
+- `Microsoft365/Get-SharePointSiteGroupMembershipReport.ps1`: Reports on SharePoint Online site group membership.
+- `Microsoft365/Get-SharePointSitePermissionReport.ps1`: Reports on SharePoint Online site permissions.
+- `Microsoft365/Get-SharePointSiteSensitivityLabelReport.ps1`: Reports on SharePoint Online site sensitivity labels.
+- `Microsoft365/Get-SharePointSiteSharingReport.ps1`: Reports on SharePoint Online site sharing settings.
+- `Microsoft365/Get-SharePointSiteStorageGrowthReport.ps1`: Reports on SharePoint Online site storage.
+- `Microsoft365/Get-SharePointSiteTemplateReport.ps1`: Reports on SharePoint Online site templates.
+- `Microsoft365/Get-SharePointSiteUsageReport.ps1`: Reports on SharePoint Online site usage.
+- `Microsoft365/Get-SharePointTenantSharingReport.ps1`: Reports on SharePoint Online tenant sharing settings.
+- `Microsoft365/Get-SharePointTenantStorageReport.ps1`: Reports on SharePoint Online tenant storage usage.
+- `Microsoft365/Get-SharePointUnusedSiteReport.ps1`: Reports on SharePoint Online unused sites.
+- `Microsoft365/Get-SharePointUserActivityReport.ps1`: Reports on SharePoint Online user activity timing.
+- `Microsoft365/Get-SharedMailboxReport.ps1`: Reports on shared mailboxes in Exchange Online.
+- `Microsoft365/Get-TeamsAppPermissionPolicyReport.ps1`: Reports on Microsoft Teams app permission policies.
+- `Microsoft365/Get-TeamsAppSetupPolicyReport.ps1`: Reports on Microsoft Teams app setup policies.
+- `Microsoft365/Get-TeamsAudioConferencingPolicyReport.ps1`: Reports on Microsoft Teams audio conferencing policies.
+- `Microsoft365/Get-TeamsCallingPolicyReport.ps1`: Reports on Microsoft Teams calling policies.
+- `Microsoft365/Get-TeamsChannelInventoryReport.ps1`: Reports on Microsoft Teams channel inventory.
+- `Microsoft365/Get-TeamsChannelPolicyReport.ps1`: Reports on Microsoft Teams channel policies.
+- `Microsoft365/Get-TeamsClientConfigurationReport.ps1`: Reports on Microsoft Teams client configuration.
+- `Microsoft365/Get-TeamsComplianceRecordingPolicyReport.ps1`: Reports on Microsoft Teams compliance recording policies.
+- `Microsoft365/Get-TeamsEmergencyCallRoutingPolicyReport.ps1`: Reports on Microsoft Teams emergency call routing policies.
+- `Microsoft365/Get-TeamsEmergencyCallingPolicyReport.ps1`: Reports on Microsoft Teams emergency calling policies.
+- `Microsoft365/Get-TeamsExternalAccessConfigurationReport.ps1`: Reports on Microsoft Teams external access configuration.
+- `Microsoft365/Get-TeamsFederationConfigurationReport.ps1`: Reports on Microsoft Teams federation configuration.
+- `Microsoft365/Get-TeamsGuestAccessConfigurationReport.ps1`: Reports on Microsoft Teams guest access configuration.
+- `Microsoft365/Get-TeamsMeetingAttendanceSummaryReport.ps1`: Reports on Microsoft Teams meeting policy assignment coverage.
+- `Microsoft365/Get-TeamsMeetingBridgeReport.ps1`: Reports on Microsoft Teams meeting bridges.
+- `Microsoft365/Get-TeamsMeetingConfigurationReport.ps1`: Reports on Microsoft Teams meeting configuration.
+- `Microsoft365/Get-TeamsMeetingPolicyReport.ps1`: Reports on Microsoft Teams meeting policies.
+- `Microsoft365/Get-TeamsMessagingPolicyReport.ps1`: Reports on Microsoft Teams messaging policies.
+- `Microsoft365/Get-TeamsOrgWidePolicyAssignmentReport.ps1`: Reports on Microsoft Teams org-wide policy assignment coverage.
+- `Microsoft365/Get-TeamsPinnedAppReport.ps1`: Reports on Microsoft Teams pinned app configuration.
+- `Microsoft365/Get-TeamsPolicyAssignmentReport.ps1`: Reports on Microsoft Teams policy assignments.
+- `Microsoft365/Get-TeamsPolicyPackageReport.ps1`: Reports on Microsoft Teams policy packages.
+- `Microsoft365/Get-TeamsPrivateChannelReport.ps1`: Reports on Microsoft Teams private channels.
+- `Microsoft365/Get-TeamsRoomPolicyReport.ps1`: Reports on Microsoft Teams room policies.
+- `Microsoft365/Get-TeamsTenantDialPlanReport.ps1`: Reports on Microsoft Teams tenant dial plans.
+- `Microsoft365/Get-TeamsUserActivityReport.ps1`: Reports on Microsoft Teams user activity.
+- `Microsoft365/Get-TeamsVoiceRouteReport.ps1`: Reports on Microsoft Teams voice routes.
+- `Microsoft365/Get-TeamsVoiceRoutingPolicyReport.ps1`: Reports on Microsoft Teams voice routing policies.
 
 ## Infrastructure Scripts
 
-These Windows infrastructure PowerShell scripts focus on server inventory, network connectivity testing, disk space checks, service health, pending updates, certificate expiry, event log review, DNS troubleshooting, uptime and reboot status, local administrator review, local account hygiene, and installed software inventory.
+These Windows infrastructure PowerShell scripts focus on server inventory, network connectivity testing, disk space checks, service health, pending updates, certificate expiry, event log review, DNS troubleshooting, uptime and reboot status, local administrator review, local account hygiene, installed software inventory, security baseline inspection, and Windows platform operations.
 
-- `Infrastructure/Get-BitLockerStatusReport.ps1`: R.
-- `Infrastructure/Get-CertificateExpiryReport.ps1`: R.
-- `Infrastructure/Get-CPUUtilizationReport.ps1`: R.
-- `Infrastructure/Get-DiskSpaceReport.ps1`: C.
-- `Infrastructure/Get-DNSConfigurationReport.ps1`: R.
-- `Infrastructure/Get-EventLogReport.ps1`: R.
-- `Infrastructure/Get-FirewallProfileReport.ps1`: R.
-- `Infrastructure/Get-InstalledHotfixReport.ps1`: R.
-- `Infrastructure/Get-InstalledSoftwareReport.ps1`: R.
-- `Infrastructure/Get-LocalAdministratorsReport.ps1`: R.
-- `Infrastructure/Get-LocalGroupMembershipReport.ps1`: R.
-- `Infrastructure/Get-LocalUserAccountReport.ps1`: R.
-- `Infrastructure/Get-MemoryUsageReport.ps1`: R.
-- `Infrastructure/Get-NetworkAdapterReport.ps1`: R.
-- `Infrastructure/Get-NTPConfigurationReport.ps1`: R.
-- `Infrastructure/Get-OSVersionReport.ps1`: R.
-- `Infrastructure/Get-PageFileConfigurationReport.ps1`: R.
-- `Infrastructure/Get-PendingUpdatesReport.ps1`: R.
-- `Infrastructure/Get-PerformanceCounterSnapshotReport.ps1`: R.
-- `Infrastructure/Get-PrinterInventoryReport.ps1`: R.
-- `Infrastructure/Get-RDPSessionReport.ps1`: R.
-- `Infrastructure/Get-RebootPendingStatusReport.ps1`: R.
-- `Infrastructure/Get-ScheduledTaskStatusReport.ps1`: R.
-- `Infrastructure/Get-ServerInventory.ps1`: C.
-- `Infrastructure/Get-SMBSharesReport.ps1`: R.
-- `Infrastructure/Get-StartupProgramReport.ps1`: R.
-- `Infrastructure/Get-SystemUptimeAndRebootReport.ps1`: R.
-- `Infrastructure/Get-TimeSyncStatusReport.ps1`: R.
-- `Infrastructure/Get-TopProcessReport.ps1`: R.
-- `Infrastructure/Get-UptimeReport.ps1`: R.
-- `Infrastructure/Get-WindowsServicesReport.ps1`: R.
-- `Infrastructure/Get-WinRMConfigurationReport.ps1`: R.
-- `Infrastructure/Test-NetworkConnectivityReport.ps1`: T.
+- `Infrastructure/Get-ARPTableReport.ps1`: Reports the IPv4 ARP table for the local system.
+- `Infrastructure/Get-AutomaticServiceFailureActionReport.ps1`: Reports on automatic service failure actions.
+- `Infrastructure/Get-BIOSVersionReport.ps1`: Reports on BIOS version details.
+- `Infrastructure/Get-BackupPolicyStatusReport.ps1`: Reports on backup policy status.
+- `Infrastructure/Get-BitLockerStatusReport.ps1`: Reports on BitLocker protection status.
+- `Infrastructure/Get-BootConfigurationReport.ps1`: Reports on boot configuration details.
+- `Infrastructure/Get-BranchCacheConfigurationReport.ps1`: Reports on BranchCache configuration.
+- `Infrastructure/Get-CPUQueueLengthReport.ps1`: Reports on CPU queue length.
+- `Infrastructure/Get-CPUUtilizationReport.ps1`: Reports on CPU utilization for local or remote computers.
+- `Infrastructure/Get-CertificateExpiryReport.ps1`: Reports on SSL/TLS certificate expiration for remote endpoints.
+- `Infrastructure/Get-ChassisInventoryReport.ps1`: Reports on chassis inventory details.
+- `Infrastructure/Get-ClusterNetworkReport.ps1`: Reports on cluster networks.
+- `Infrastructure/Get-ClusterNodeReport.ps1`: Reports on cluster nodes.
+- `Infrastructure/Get-ClusterQuorumReport.ps1`: Reports on cluster quorum configuration.
+- `Infrastructure/Get-ClusterResourceReport.ps1`: Reports on cluster resources.
+- `Infrastructure/Get-ClusterSharedVolumeReport.ps1`: Reports on cluster shared volumes.
+- `Infrastructure/Get-ComputerSystemProductReport.ps1`: Reports on computer system product details.
+- `Infrastructure/Get-CredSSPConfigurationReport.ps1`: Reports the current CredSSP configuration.
+- `Infrastructure/Get-DCOMConfigurationReport.ps1`: Reports the local DCOM configuration values.
+- `Infrastructure/Get-DFSNamespaceReport.ps1`: Reports on DFS namespaces.
+- `Infrastructure/Get-DFSReplicationGroupReport.ps1`: Reports on DFS replication groups.
+- `Infrastructure/Get-DHCPLeaseScopeReport.ps1`: Reports on DHCP lease scopes.
+- `Infrastructure/Get-DHCPServerSettingReport.ps1`: Reports on DHCP server settings.
+- `Infrastructure/Get-DNSCacheInventoryReport.ps1`: Reports the local DNS client cache inventory.
+- `Infrastructure/Get-DNSClientServerAddressReport.ps1`: Reports DNS client server assignments.
+- `Infrastructure/Get-DNSConfigurationReport.ps1`: Reports on DNS configuration for local or remote servers.
+- `Infrastructure/Get-DNSConnectionSuffixReport.ps1`: Reports DNS connection suffix configuration.
+- `Infrastructure/Get-DNSHostsFileEntryReport.ps1`: Reports hosts file entries on the local system.
+- `Infrastructure/Get-DeliveryOptimizationConfigurationReport.ps1`: Reports on Delivery Optimization configuration.
+- `Infrastructure/Get-DiskHealthReport.ps1`: Reports on disk health details.
+- `Infrastructure/Get-DiskLatencyReport.ps1`: Reports on disk latency metrics.
+- `Infrastructure/Get-DiskPartitionLayoutReport.ps1`: Reports on disk partition layout details.
+- `Infrastructure/Get-DiskSpaceReport.ps1`: Checks disk space on local or remote servers.
+- `Infrastructure/Get-DiskVolumeShadowCopyReport.ps1`: Reports on volume shadow copy settings.
+- `Infrastructure/Get-DriverInventoryReport.ps1`: Reports on installed driver inventory.
+- `Infrastructure/Get-EventLogChannelConfigurationReport.ps1`: Reports on Windows event log channel configuration.
+- `Infrastructure/Get-EventLogReport.ps1`: Reports on Windows event log errors and warnings.
+- `Infrastructure/Get-FileServerQuotaReport.ps1`: Reports on file server quotas.
+- `Infrastructure/Get-FirewallProfileReport.ps1`: Reports on Windows Firewall profile configuration.
+- `Infrastructure/Get-FirewallRuleInventoryReport.ps1`: Reports the Windows Firewall rule inventory.
+- `Infrastructure/Get-FirmwareTypeReport.ps1`: Reports on firmware type details.
+- `Infrastructure/Get-HTTPProxyConfigurationReport.ps1`: Reports the WinINET HTTP proxy configuration.
+- `Infrastructure/Get-HyperVCheckpointReport.ps1`: Reports on Hyper-V checkpoints.
+- `Infrastructure/Get-HyperVHostNetworkReport.ps1`: Reports on Hyper-V host networking.
+- `Infrastructure/Get-HyperVHostSummaryReport.ps1`: Reports on Hyper-V host summary information.
+- `Infrastructure/Get-HyperVReplicaStatusReport.ps1`: Reports on Hyper-V replica status.
+- `Infrastructure/Get-HyperVSwitchReport.ps1`: Reports on Hyper-V virtual switches.
+- `Infrastructure/Get-HyperVVirtualMachineReport.ps1`: Reports on Hyper-V virtual machines.
+- `Infrastructure/Get-IISAppPoolReport.ps1`: Reports on IIS application pools.
+- `Infrastructure/Get-IISApplicationReport.ps1`: Reports on IIS applications.
+- `Infrastructure/Get-IISBindingReport.ps1`: Reports on IIS bindings.
+- `Infrastructure/Get-IISCertificateBindingReport.ps1`: Reports on IIS certificate bindings.
+- `Infrastructure/Get-IISLoggingConfigurationReport.ps1`: Reports on IIS logging configuration.
+- `Infrastructure/Get-IISRequestFilteringReport.ps1`: Reports on IIS request filtering.
+- `Infrastructure/Get-IISSiteAuthenticationReport.ps1`: Reports on IIS site authentication settings.
+- `Infrastructure/Get-IISSiteReport.ps1`: Reports on IIS websites.
+- `Infrastructure/Get-IISSiteStateReport.ps1`: Reports on IIS site state.
+- `Infrastructure/Get-IISSslSettingsReport.ps1`: Reports on IIS SSL settings.
+- `Infrastructure/Get-IISVirtualDirectoryReport.ps1`: Reports on IIS virtual directories.
+- `Infrastructure/Get-IPRouteTableReport.ps1`: Reports the IP route table.
+- `Infrastructure/Get-IPsecMainModeRuleReport.ps1`: Reports IPsec main mode rules.
+- `Infrastructure/Get-IPsecQuickModeRuleReport.ps1`: Reports IPsec quick mode rules.
+- `Infrastructure/Get-InstalledHotfixReport.ps1`: Reports on installed hotfixes for local or remote computers.
+- `Infrastructure/Get-InstalledSoftwareReport.ps1`: Reports on installed software across local or remote computers.
+- `Infrastructure/Get-LAPSClientStatusReport.ps1`: Reports the local Windows LAPS client status.
+- `Infrastructure/Get-ListeningPortReport.ps1`: Reports local listening TCP and UDP ports.
+- `Infrastructure/Get-LocalAdministratorsReport.ps1`: Reports on local Administrators group membership.
+- `Infrastructure/Get-LocalCertificateStoreReport.ps1`: Reports certificates from the local machine certificate stores.
+- `Infrastructure/Get-LocalGroupMembershipReport.ps1`: Reports on local group membership.
+- `Infrastructure/Get-LocalProfileInventoryReport.ps1`: Reports on local profile inventory.
+- `Infrastructure/Get-LocalSecurityPolicyReport.ps1`: Reports the local security policy settings.
+- `Infrastructure/Get-LocalUserAccountReport.ps1`: Reports on local user accounts.
+- `Infrastructure/Get-LogicalProcessorInventoryReport.ps1`: Reports on logical processor inventory.
+- `Infrastructure/Get-LogonRightsAssignmentReport.ps1`: Reports local logon rights assignments.
+- `Infrastructure/Get-MemoryUsageReport.ps1`: Reports on memory usage for local or remote computers.
+- `Infrastructure/Get-MotherboardInventoryReport.ps1`: Reports on motherboard inventory details.
+- `Infrastructure/Get-NTPConfigurationReport.ps1`: Reports on NTP configuration.
+- `Infrastructure/Get-NUMAConfigurationReport.ps1`: Reports on NUMA configuration details.
+- `Infrastructure/Get-NetAdapterAdvancedPropertyReport.ps1`: Reports advanced network adapter properties.
+- `Infrastructure/Get-NetAdapterBindingReport.ps1`: Reports network adapter binding state.
+- `Infrastructure/Get-NetConnectionProfileReport.ps1`: Reports the active network connection profiles.
+- `Infrastructure/Get-NetworkAdapterReport.ps1`: Reports on network adapter configuration.
+- `Infrastructure/Get-NetworkInterfaceStatisticsReport.ps1`: Reports network interface statistics.
+- `Infrastructure/Get-NetworkLatencySummaryReport.ps1`: Reports network latency summary data.
+- `Infrastructure/Get-NetworkNeighborCacheReport.ps1`: Reports the network neighbor cache.
+- `Infrastructure/Get-NetworkPortProxyReport.ps1`: Reports configured port proxy rules.
+- `Infrastructure/Get-NetworkProtocolBindingReport.ps1`: Reports bound networking protocol components.
+- `Infrastructure/Get-NetworkTeamStatusReport.ps1`: Reports Windows NIC team status.
+- `Infrastructure/Get-OSVersionReport.ps1`: Reports on operating system version information.
+- `Infrastructure/Get-OfflineFilesConfigurationReport.ps1`: Reports on Offline Files configuration.
+- `Infrastructure/Get-OpenSMBSessionReport.ps1`: Reports open SMB sessions.
+- `Infrastructure/Get-OpenTcpConnectionReport.ps1`: Reports open TCP connections.
+- `Infrastructure/Get-PageFaultRateReport.ps1`: Reports on page fault rates.
+- `Infrastructure/Get-PageFileConfigurationReport.ps1`: Reports on page file configuration.
+- `Infrastructure/Get-PageFileUsageReport.ps1`: Reports on page file usage details.
+- `Infrastructure/Get-PendingUpdatesReport.ps1`: Reports on pending Windows updates for local or remote servers.
+- `Infrastructure/Get-PerformanceBaselineReport.ps1`: Reports on performance baseline metrics.
+- `Infrastructure/Get-PerformanceCounterSnapshotReport.ps1`: Reports on a snapshot of performance counters.
+- `Infrastructure/Get-PhysicalDiskInventoryReport.ps1`: Reports on physical disk inventory.
+- `Infrastructure/Get-PhysicalMemorySlotReport.ps1`: Reports on physical memory slot usage.
+- `Infrastructure/Get-PowerPlanReport.ps1`: Reports on active power plan details.
+- `Infrastructure/Get-PowerShellExecutionPolicyReport.ps1`: Reports execution policy by scope.
+- `Infrastructure/Get-PowerShellModuleInventoryReport.ps1`: Reports the installed PowerShell module inventory.
+- `Infrastructure/Get-PowerShellProfileConfigurationReport.ps1`: Reports PowerShell profile configuration.
+- `Infrastructure/Get-PrintDriverInventoryReport.ps1`: Reports on print drivers.
+- `Infrastructure/Get-PrintJobQueueReport.ps1`: Reports on print job queues.
+- `Infrastructure/Get-PrinterInventoryReport.ps1`: Reports on printer inventory.
+- `Infrastructure/Get-ProcessHandleUsageReport.ps1`: Reports on process handle usage.
+- `Infrastructure/Get-ProcessStartupTimeReport.ps1`: Reports on process startup time details.
+- `Infrastructure/Get-ProcessThreadUsageReport.ps1`: Reports on process thread usage.
+- `Infrastructure/Get-ProcessorCacheReport.ps1`: Reports on processor cache details.
+- `Infrastructure/Get-ProcessorPowerStateReport.ps1`: Reports on processor power state details.
+- `Infrastructure/Get-ProxyAutoConfigurationReport.ps1`: Reports proxy auto-configuration settings.
+- `Infrastructure/Get-RDPSessionReport.ps1`: Reports on active RDP sessions.
+- `Infrastructure/Get-RebootPendingStatusReport.ps1`: Reports on pending reboot status.
+- `Infrastructure/Get-RegistrySizeReport.ps1`: Reports on registry hive size details.
+- `Infrastructure/Get-RemoteDesktopConfigurationReport.ps1`: Reports Remote Desktop configuration.
+- `Infrastructure/Get-RemoteDesktopLicenseConfigurationReport.ps1`: Reports on Remote Desktop Services licensing configuration.
+- `Infrastructure/Get-RemoteEventLogConfigurationReport.ps1`: Reports local event log configuration.
+- `Infrastructure/Get-RemoteManagementPortReport.ps1`: Reports WinRM remote management listener ports.
+- `Infrastructure/Get-RemoteRegistryStatusReport.ps1`: Reports the Remote Registry service status.
+- `Infrastructure/Get-SChannelProtocolConfigurationReport.ps1`: Reports SChannel protocol configuration.
+- `Infrastructure/Get-SMBClientConfigurationReport.ps1`: Reports SMB client configuration.
+- `Infrastructure/Get-SMBServerConfigurationReport.ps1`: Reports SMB server configuration.
+- `Infrastructure/Get-SMBSharesReport.ps1`: Reports on SMB shares.
+- `Infrastructure/Get-SNMPConfigurationReport.ps1`: Reports on SNMP configuration.
+- `Infrastructure/Get-ScheduledTaskHistorySummaryReport.ps1`: Reports on scheduled task history summary.
+- `Infrastructure/Get-ScheduledTaskStatusReport.ps1`: Reports on scheduled task status.
+- `Infrastructure/Get-ScheduledTaskTriggerReport.ps1`: Reports on scheduled task triggers.
+- `Infrastructure/Get-SecureBootConfigurationReport.ps1`: Reports Secure Boot status.
+- `Infrastructure/Get-ServerInventory.ps1`: Collects server inventory information for documentation and auditing.
+- `Infrastructure/Get-ServerRoleFeatureInventoryReport.ps1`: Reports on server role and feature inventory.
+- `Infrastructure/Get-ServiceDependencyReport.ps1`: Reports on Windows service dependencies.
+- `Infrastructure/Get-ServiceRecoveryOptionReport.ps1`: Reports on Windows service recovery options.
+- `Infrastructure/Get-ServiceStartupSummaryReport.ps1`: Reports on Windows service startup modes.
+- `Infrastructure/Get-ShadowCopyConfigurationReport.ps1`: Reports on shadow copy configuration.
+- `Infrastructure/Get-StartupProgramReport.ps1`: Reports on configured startup programs.
+- `Infrastructure/Get-StoragePoolReport.ps1`: Reports on storage pool details.
+- `Infrastructure/Get-StorageQoSPolicyReport.ps1`: Reports on storage QoS policy details.
+- `Infrastructure/Get-StorageReplicaReport.ps1`: Reports on storage replica details.
+- `Infrastructure/Get-StorageSubsystemReport.ps1`: Reports on storage subsystem details.
+- `Infrastructure/Get-StorageTierReport.ps1`: Reports on storage tier details.
+- `Infrastructure/Get-SystemCrashDumpConfigurationReport.ps1`: Reports on system crash dump configuration.
+- `Infrastructure/Get-SystemDriverStateReport.ps1`: Reports on system driver state details.
+- `Infrastructure/Get-SystemEnvironmentVariableReport.ps1`: Reports on system environment variable details.
+- `Infrastructure/Get-SystemLocaleReport.ps1`: Reports on system locale details.
+- `Infrastructure/Get-SystemModelFirmwareReport.ps1`: Reports on system model and firmware details.
+- `Infrastructure/Get-SystemRestorePointReport.ps1`: Reports on system restore point details.
+- `Infrastructure/Get-SystemThermalSensorReport.ps1`: Reports on system thermal sensor details.
+- `Infrastructure/Get-SystemUptimeAndRebootReport.ps1`: Reports on system uptime and reboot age.
+- `Infrastructure/Get-TCPSettingReport.ps1`: Reports TCP settings.
+- `Infrastructure/Get-TLSCipherSuiteReport.ps1`: Reports local TLS cipher suites.
+- `Infrastructure/Get-TLSProtocolConfigurationReport.ps1`: Reports TLS protocol configuration.
+- `Infrastructure/Get-TempFolderUsageReport.ps1`: Reports on temporary folder usage details.
+- `Infrastructure/Get-TimeSyncStatusReport.ps1`: Reports on time synchronization status.
+- `Infrastructure/Get-TopProcessReport.ps1`: Reports on the top processes by memory usage.
+- `Infrastructure/Get-UDPListenerReport.ps1`: Reports local UDP listeners.
+- `Infrastructure/Get-UPSStatusReport.ps1`: Reports on UPS status.
+- `Infrastructure/Get-UptimeReport.ps1`: Reports on server uptime and last boot time.
+- `Infrastructure/Get-UserSessionProcessReport.ps1`: Reports on user session processes.
+- `Infrastructure/Get-VolumeDeduplicationReport.ps1`: Reports on volume deduplication details.
+- `Infrastructure/Get-VolumeShadowStorageReport.ps1`: Reports on volume shadow storage details.
+- `Infrastructure/Get-VolumeUsageTrendReport.ps1`: Reports on volume usage trend details.
+- `Infrastructure/Get-WMIRepositoryStatusReport.ps1`: Reports on WMI repository status.
+- `Infrastructure/Get-WSUSClientConfigurationReport.ps1`: Reports on WSUS client configuration.
+- `Infrastructure/Get-WebManagementServiceReport.ps1`: Reports on the Web Management Service.
+- `Infrastructure/Get-WinHTTPProxyConfigurationReport.ps1`: Reports the WinHTTP proxy configuration.
+- `Infrastructure/Get-WinRMConfigurationReport.ps1`: Reports on WinRM configuration.
+- `Infrastructure/Get-WindowsActivationStatusReport.ps1`: Reports on Windows activation status.
+- `Infrastructure/Get-WindowsCapabilityInventoryReport.ps1`: Reports on Windows capability inventory.
+- `Infrastructure/Get-WindowsDefenderPreferenceReport.ps1`: Reports Microsoft Defender preferences.
+- `Infrastructure/Get-WindowsDefenderThreatSummaryReport.ps1`: Reports Microsoft Defender threat detections.
+- `Infrastructure/Get-WindowsFeatureInstallStateReport.ps1`: Reports on Windows feature install state.
+- `Infrastructure/Get-WindowsLicensingReport.ps1`: Reports on Windows licensing details.
+- `Infrastructure/Get-WindowsOptionalFeatureInventoryReport.ps1`: Reports on Windows optional feature inventory.
+- `Infrastructure/Get-WindowsPackageInventoryReport.ps1`: Reports on Windows package inventory.
+- `Infrastructure/Get-WindowsRecoveryConfigurationReport.ps1`: Reports on Windows recovery configuration details.
+- `Infrastructure/Get-WindowsServicesReport.ps1`: Reports on Windows services across local or remote servers.
+- `Infrastructure/Get-WindowsUpdatePolicyConfigurationReport.ps1`: Reports Windows Update policy configuration.
+- `Infrastructure/Get-WorkFolderSyncShareReport.ps1`: Reports on Work Folders sync shares.
+- `Infrastructure/Test-NetworkConnectivityReport.ps1`: Tests network connectivity to specified endpoints.
+- `Infrastructure/Test-NetworkPortAvailabilityReport.ps1`: Tests whether network ports are reachable.
+- `Infrastructure/Test-RemoteEndpointLatencyReport.ps1`: Tests latency to remote endpoints.
+
+## Documentation Rule for Future Script Development
+
+- Every new, renamed, moved, removed, or materially repurposed `.ps1` script must be reflected in `repository.md` in the same change.
+- Each script entry in `repository.md` must include the repository-relative path and a one-sentence description of what the script does, ideally aligned with the script `.SYNOPSIS`.
+- When the script inventory changes, update the total script count at the top of this document so the repository catalog remains accurate.
 
 ## Repository Summary
 
 This PowerShell repository is intended for system administrators, infrastructure engineers, cloud engineers, security teams, Microsoft 365 administrators, and IT consultants who need ready-to-use scripts for Microsoft environments. The script library covers Active Directory reporting, Entra ID auditing, Azure governance, Microsoft 365 administration, and Windows infrastructure operations in a single repository.
 
 All scripts should be reviewed, tested, and validated in a non-production environment before use in production systems.
-

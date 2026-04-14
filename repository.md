@@ -2,7 +2,7 @@
 
 FrenetikEquation PowerShell Script Repository is a practical collection of PowerShell scripts for Active Directory, Entra ID, Azure, Microsoft 365, and Windows infrastructure administration. The repository is built for reporting, auditing, operational support, governance reviews, tenant visibility, server health checks, and day-to-day IT administration.
 
-This repository currently includes 668 PowerShell scripts covering:
+This repository currently includes 670 PowerShell scripts covering:
 
 - Active Directory audit scripts
 - Entra ID reporting and security review scripts
@@ -14,7 +14,7 @@ All script files currently tracked in this repository are PowerShell `.ps1` scri
 
 ## Active Directory Scripts
 
-These Active Directory PowerShell scripts focus on user auditing, group membership reporting, computer inventory, password health, GPO reporting, OU structure analysis, domain controller health checks, lockout monitoring, and privileged access review.
+These Active Directory PowerShell scripts focus on user auditing, group membership reporting, computer inventory, password health, GPO reporting, OU structure analysis, domain controller health checks, lockout monitoring, Windows LAPS visibility, and privileged access review.
 
 - `ActiveDirectory/Audit-InactiveUsers.ps1`: Identifies inactive user accounts in Active Directory.
 - `ActiveDirectory/Export-ADGroupMembership.ps1`: Exports group membership information from Active Directory.
@@ -199,10 +199,11 @@ These Active Directory PowerShell scripts focus on user auditing, group membersh
 - `ActiveDirectory/Get-ADUserSmartcardRequirementReport.ps1`: Reports on Active Directory users requiring smart card logon.
 - `ActiveDirectory/Get-ADUserTerminalServicesProfileReport.ps1`: Reports on Active Directory user Terminal Services profile paths.
 - `ActiveDirectory/Get-ADWellKnownContainerReport.ps1`: Reports on Active Directory well-known containers.
+- `ActiveDirectory/Get-ADWindowsLAPSStatusReport.ps1`: Reports on Active Directory Windows LAPS password rotation status.
 
 ## Entra ID Scripts
 
-These Entra ID PowerShell scripts help with tenant reporting, sign-in monitoring, guest user reviews, application credential tracking, Conditional Access visibility, role review, Microsoft Entra Connect version checking, MFA readiness, consent auditing, and service principal governance.
+These Entra ID PowerShell scripts help with tenant reporting, sign-in monitoring, guest user reviews, application credential tracking, Conditional Access visibility, role review, Microsoft Entra Connect version checking, MFA readiness, passkey registration coverage, consent auditing, and service principal governance.
 
 - `EntraID/Export-EntraUsers.ps1`: Exports Entra ID user information for reporting purposes.
 - `EntraID/Get-EntraAccessReviewActivityReport.ps1`: Reports on Entra ID access review definitions in a activity view.
@@ -298,6 +299,7 @@ These Entra ID PowerShell scripts help with tenant reporting, sign-in monitoring
 - `EntraID/Get-EntraMFARegistrationReport.ps1`: Reports on Entra ID MFA registration status.
 - `EntraID/Get-EntraNamedLocationsReport.ps1`: Reports on Microsoft Entra named locations.
 - `EntraID/Get-EntraOauthPermissionGrantsReport.ps1`: Reports on Microsoft Entra OAuth permission grants.
+- `EntraID/Get-EntraPasskeyRegistrationReport.ps1`: Reports on Entra ID passkey registration coverage.
 - `EntraID/Get-EntraPIMRoleEligibilityReport.ps1`: Reports on Microsoft Entra PIM role eligibility.
 - `EntraID/Get-EntraPrivilegedIdentityManagementActivityReport.ps1`: Reports on Entra ID privileged role schedule instances in a activity view.
 - `EntraID/Get-EntraPrivilegedIdentityManagementAssignmentReport.ps1`: Reports on Entra ID privileged role schedule instances in a assignment view.

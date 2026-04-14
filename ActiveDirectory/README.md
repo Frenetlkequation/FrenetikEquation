@@ -103,6 +103,9 @@ R.
 ### Get-ADUserPasswordExpiryForecastReport.ps1
 R.
 
+### Get-ADWindowsLAPSStatusReport.ps1
+R.
+
 ## Usage Notes
 
 Review script parameters and permissions before use.

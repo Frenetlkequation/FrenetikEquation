@@ -76,6 +76,9 @@ R.
 ### Get-EntraOauthPermissionGrantsReport.ps1
 R.
 
+### Get-EntraPasskeyRegistrationReport.ps1
+R.
+
 ### Get-EntraPIMRoleEligibilityReport.ps1
 R.
 
